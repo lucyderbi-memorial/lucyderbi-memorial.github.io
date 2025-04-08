@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>In Loving Memory - Rev. Mrs. Lucy Perbi-Nyarko</title>
+    <title>In Loving Memory - Rev. Mrs. Lucy Derbi-Nyarko</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
@@ -782,13 +782,104 @@
         body.loaded {
             opacity: 1;
         }
+        /* Tributes styling */
+        .tributes {
+            background-color: var(--secondary-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tributes::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('b.jpg') center/cover no-repeat fixed;
+            opacity: 0.05;
+            z-index: 0;
+        }
+        
+        .tribute-card {
+            background-color: var(--program-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .tribute-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            padding: 25px;
+            position: relative;
+            color: var(--light-text);
+            text-align: center;
+        }
+        
+        .tribute-header h3 {
+            margin: 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .quote-icon {
+            position: absolute;
+            top: 50%;
+            right: 25px;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            opacity: 0.3;
+        }
+        
+        .tribute-content {
+            padding: 35px;
+            color: var(--text-color);
+        }
+        
+        .featured-quote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            padding: 20px;
+            border-left: 4px solid var(--gold);
+            background-color: rgba(252, 222, 192, 0.2);
+        }
+        
+        .tribute-content h4 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .tribute-content p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .tribute-signature {
+            font-style: italic;
+            text-align: right;
+            margin-top: 30px;
+            color: var(--primary-color);
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top nav" id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="#home">Rev. Mrs. Lucy Perbi-Nyarko</a>
+            <a class="navbar-brand" href="#home">Rev. Mrs. Lucy Derbi-Nyarko</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -810,6 +901,9 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#tributes">Tributes</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#location">Location</a>
                     </li>
                 </ul>
@@ -820,7 +914,7 @@
     <!-- Hero Section -->
     <header id="home">
         <div class="hero-text animate__animated animate__fadeIn">
-            <h1>Rev. Mrs. Lucy Perbi-Nyarko</h1>
+            <h1>Rev. Mrs. Lucy Derbi-Nyarko</h1>
             <p>In Loving Memory</p>
             <div class="dates">A Faithful Servant of God</div>
             <a href="#program" class="btn">View Memorial Service</a>
@@ -978,22 +1072,22 @@
             <span class="ornament">❧</span>
             <div class="gallery">
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="a.jpg" alt="Rev. Mrs. Lucy Perbi-Nyarko speaking at church">
+                    <img src="a.jpg" alt="Rev. Mrs. Lucy Derbi-Nyarko speaking at church">
                 </div>
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="b.jpg" alt="Rev. Mrs. Lucy Perbi-Nyarko worshiping with others">
+                    <img src="b.jpg" alt="Rev. Mrs. Lucy Derbi-Nyarko worshiping with others">
                 </div>
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="a.jpg" alt="Rev. Mrs. Lucy Perbi-Nyarko with microphone">
+                    <img src="a.jpg" alt="Rev. Mrs. Lucy Derbi-Nyarko with microphone">
                 </div>
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="b.jpg" alt="Rev. Mrs. Lucy Perbi-Nyarko in leopard print outfit">
+                    <img src="b.jpg" alt="Rev. Mrs. Lucy Derbi-Nyarko in leopard print outfit">
                 </div>
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
-                    <img src="a.jpg" alt="Rev. Mrs. Lucy Perbi-Nyarko at service">
+                    <img src="a.jpg" alt="Rev. Mrs. Lucy Derbi-Nyarko at service">
                 </div>
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
-                    <img src="b.jpg" alt="Rev. Mrs. Lucy Perbi-Nyarko with hands raised">
+                    <img src="b.jpg" alt="Rev. Mrs. Lucy Derbi-Nyarko with hands raised">
                 </div>
             </div>
         </div>
@@ -1002,22 +1096,73 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">About Rev. Mrs. Lucy Perbi-Nyarko</h2>
+            <h2 class="section-title" data-aos="fade-up">About Rev. Mrs. Lucy Derbi-Nyarko</h2>
             <span class="ornament">❧</span>
             <div class="about-content">
                 <div class="about-image" data-aos="fade-right">
-                    <img src="a.jpg" alt="Rev. Mrs. Lucy Perbi-Nyarko portrait">
+                    <img src="a.jpg" alt="Rev. Mrs. Lucy Derbi-Nyarko portrait">
                 </div>
                 <div class="about-text" data-aos="fade-left">
                     <h3>A Life of Faith and Service</h3>
                     <div class="read-more-content" id="about-bio">
-                        <p>Rev. Mrs. Lucy Perbi-Nyarko was a dedicated servant of God who touched countless lives through her ministry and compassionate spirit. Her journey of faith led her to serve in various capacities within the church and community.</p>
-                        <p>Known for her vibrant personality and love for traditional African culture, Rev. Mrs. Perbi-Nyarko was always adorned in colorful clothing that reflected her heritage and joyful spirit. Her ministry was characterized by passionate worship and powerful teaching of God's word.</p>
+                        <p>Rev. Mrs. Lucy Derbi-Nyarko was a dedicated servant of God who touched countless lives through her ministry and compassionate spirit. Her journey of faith led her to serve in various capacities within the church and community.</p>
+                        <p>Known for her vibrant personality and love for traditional African culture, Rev. Mrs. Derbi-Nyarko was always adorned in colorful clothing that reflected her heritage and joyful spirit. Her ministry was characterized by passionate worship and powerful teaching of God's word.</p>
                         <p>Throughout her life, she remained committed to uplifting others, particularly encouraging women in ministry. Her legacy continues through the many lives she touched and the spiritual children she mentored.</p>
                         <p>Though she has gone to be with the Lord, her impact remains, and her memory lives on in our hearts. We celebrate a life well-lived in service to God and humanity.</p>
                     </div>
                     <span class="read-more-toggle" data-target="about-bio">
                         Read More <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tributes Section -->
+    <section id="tributes" class="tributes">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Tributes</h2>
+            <span class="ornament">❧</span>
+            
+            <div class="tribute-card" data-aos="fade-up">
+                <div class="tribute-header">
+                    <h3>TRIBUTE BY PS. BENE ON BEHALF OF ELIM CITY</h3>
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                </div>
+                <div class="tribute-content">
+                    <div class="featured-quote">
+                        <p>"Many women do noble things, but you surpass them all." — Proverbs 31:28-29</p>
+                    </div>
+                    <h4>Maa Luu – A Faithful Steward, A Selfless Leader, A True Friend</h4>
+                    <div class="read-more-content" id="tribute-elim">
+                        <p>With heavy hearts yet deep gratitude, we celebrate the life of our dear Rev. Mrs. Lucy Perby Nyarko, affectionately known as Maa Luu. She was more than a friend; she was a pillar, a confidante, a relentless worker in the vineyard of the Lord, and a woman of unwavering faith.</p>
+                        
+                        <p>From the very inception of Elim City, Maa Luu was present—praying, serving, and leading. She was one of the pioneers who helped birth the vision of this church, never relenting in her commitment even when work transferred her to Bolgatanga as the Regional Director for VRA. Distance never diminished her devotion; rather, she expanded the work of the ministry by helping plant the Tamale branch of Elim City.</p>
+                        
+                        <p>She was a woman who embraced all—young and old, rich and poor. No task was beneath her, no responsibility too overwhelming. Whether making high-level boardroom decisions as a board member or coordinating the daily operations of the church, she poured her heart into everything she did. As an associate to the Senior Pastor, she provided wise counsel and unwavering support, line-managing three departments and twelve ministries with diligence and grace.</p>
+                        
+                        <p>Her recent role as the pastor of the Aseda (Twi) Service was yet another testament to her deep love for God's people. With a motherly heart and a firm spirit, she shepherded the congregation with passion, ensuring they grew in both faith and community.</p>
+                        
+                        <p>Beyond her service, she shared a special bond with Pastor Gospel—a relationship built on mutual respect, trust, and understanding. Though she was a force to be reckoned with, one thing remained certain: she submitted to pastoral guidance with humility. Even in moments of disagreement, she would say, "Had it not been for Pastor..." or "My Papa has spoken, it is final." Her obedience and reverence for leadership were a mark of her wisdom and spiritual maturity.</p>
+                        
+                        <p>My last encounter with Maa Luu in Accra, the night before I traveled to London, is a moment I will cherish forever. It was a time of warmth, laughter, and deep reflection—one that now holds even greater significance. Little did I know it would be our last conversation. She was special to me, to Pastor Gospel, and to the entire Elim City family. Her absence has created a gap that will take many to fill.</p>
+                        
+                        <p>She will be dearly missed—especially at Christmas, a season she embraced with so much joy. The annual Children's Christmas Party she organized was a highlight for the little ones, who adored her warmth and generosity. Her high-spirited approach to the Carol Service, Christmas by the Fire, and every festive gathering made the season even more special. She was a pillar in the Women's Network, a cherished part of the Diamond Congregation, and an invaluable member of the Finance Team, where her sharp mind and integrity were unmatched.</p>
+                        
+                        <p>For Pastor Adams and me, our Three Musketeers team is no more. The bond we shared, the moments of deep discussions, strategy meetings, and laughter—those will never be the same again.</p>
+                        
+                        <p>Maa Luu's resilience in faith and service was exceptional. She didn't just preach the gospel—she lived it. Whether leading in worship, auditing church finances, or dancing joyfully in praise, she embodied the heart of a true servant of God.</p>
+                        
+                        <p>Her legacy in Elim City is indelible. We have lost a gem, but heaven has gained a saint. Though she is absent in body, her impact remains. We take solace in the fact that she has fought the good fight, finished her race, and kept the faith.</p>
+                        
+                        <p>Rest well and thank you Rev Mrs Perbi - Nyarko, Elim's sweet sixteen and our own Maa Luu. Your life was a testimony, and your reward is sure. Till we meet again in glory.</p>
+                        
+                        <p class="tribute-signature">With love and gratitude,<br>Your friends, colleagues, and church family at Elim City</p>
+                    </div>
+                    <span class="read-more-toggle" data-target="tribute-elim">
+                        Read Full Tribute <i class="fas fa-chevron-down"></i>
                     </span>
                 </div>
             </div>
@@ -1045,7 +1190,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <h3>In Loving Memory of Rev. Mrs. Lucy Perbi-Nyarko</h3>
+            <h3>In Loving Memory of Rev. Mrs. Lucy Derbi-Nyarko</h3>
             <p>A Faithful Servant of God</p>
             <div class="social-icons">
                 <a href="#"><i class="fab fa-facebook"></i></a>
@@ -1054,7 +1199,7 @@
                 <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
             <div class="copyright">
-                &copy; 2025 - In Memory of Rev. Mrs. Lucy Perbi-Nyarko
+                &copy; 2025 - In Memory of Rev. Mrs. Lucy Derbi-Nyarko
             </div>
         </div>
     </footer>
