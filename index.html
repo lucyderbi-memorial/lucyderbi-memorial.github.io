@@ -331,6 +331,567 @@
             opacity: 0.9;
         }
         
+        /* Gallery Styling */
+        .gallery-controls {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 0;
+            z-index: 10;
+            padding: 0 5%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .gallery-control {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            pointer-events: auto;
+        }
+
+        .gallery-control:hover {
+            background-color: var(--accent-color);
+            color: var(--light-text);
+            transform: scale(1.1);
+        }
+
+        .gallery-carousel {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background-color: var(--program-bg);
+        }
+
+        .gallery-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .gallery-slide {
+            flex: 0 0 100%;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-slide:hover img {
+            transform: scale(1.02);
+        }
+
+        .gallery-thumbnails {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 0 15px;
+        }
+
+        .gallery-thumbnail {
+            width: 80px;
+            height: 60px;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+            opacity: 0.7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--program-bg);
+        }
+
+        .gallery-thumbnail.active {
+            border-color: var(--accent-color);
+            opacity: 1;
+        }
+
+        .gallery-thumbnail:hover {
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+
+        .gallery-thumbnail img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Lightbox Styling */
+        .gallery-lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            border: none;
+            color: var(--light-text);
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 1001;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            color: var(--accent-color);
+            transform: rotate(90deg);
+        }
+
+        .lightbox-prev,
+        .lightbox-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--light-text);
+            font-size: 2rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-prev {
+            left: 20px;
+        }
+
+        .lightbox-next {
+            right: 20px;
+        }
+
+        .lightbox-prev:hover,
+        .lightbox-next:hover {
+            background: rgba(229, 178, 153, 0.5);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .lightbox-image-container {
+            width: 90%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #lightboxImage {
+            max-width: 90%;
+            max-height: 90%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            transform: scale(0.9);
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        #lightboxImage.loaded {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: var(--light-text);
+            padding: 10px;
+            font-size: 1.2rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .gallery-carousel {
+                height: 350px;
+            }
+            
+            .gallery-thumbnail {
+                width: 60px;
+                height: 45px;
+            }
+            
+            .gallery-control {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            
+            .lightbox-prev,
+            .lightbox-next {
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-carousel {
+                height: 300px;
+            }
+            
+            .gallery-thumbnails {
+                gap: 5px;
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 10px;
+                justify-content: flex-start;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: thin;
+            }
+            
+            .gallery-thumbnail {
+                width: 50px;
+                height: 40px;
+                flex: 0 0 auto;
+            }
+            
+            /* Scrollbar styling for thumbnails */
+            .gallery-thumbnails::-webkit-scrollbar {
+                height: 5px;
+            }
+            
+            .gallery-thumbnails::-webkit-scrollbar-track {
+                background: var(--program-bg);
+                border-radius: 10px;
+            }
+            
+            .gallery-thumbnails::-webkit-scrollbar-thumb {
+                background: var(--accent-color);
+                border-radius: 10px;
+            }
+        }
+                /* Gallery Styling */
+        .gallery-controls {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 0;
+            z-index: 10;
+            padding: 0 5%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .gallery-control {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            pointer-events: auto;
+        }
+
+        .gallery-control:hover {
+            background-color: var(--accent-color);
+            color: var(--light-text);
+            transform: scale(1.1);
+        }
+
+        .gallery-carousel {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-track {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .gallery-slide {
+            flex: 0 0 100%;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-slide:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-thumbnails {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .gallery-thumbnail {
+            width: 80px;
+            height: 60px;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+
+        .gallery-thumbnail.active {
+            border-color: var(--accent-color);
+            opacity: 1;
+        }
+
+        .gallery-thumbnail:hover {
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+
+        .gallery-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Lightbox Styling */
+        .gallery-lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            border: none;
+            color: var(--light-text);
+            font-size: 2rem;
+            cursor: pointer;
+            z-index: 1001;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            color: var(--accent-color);
+            transform: rotate(90deg);
+        }
+
+        .lightbox-prev,
+        .lightbox-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--light-text);
+            font-size: 2rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-prev {
+            left: 20px;
+        }
+
+        .lightbox-next {
+            right: 20px;
+        }
+
+        .lightbox-prev:hover,
+        .lightbox-next:hover {
+            background: rgba(229, 178, 153, 0.5);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .lightbox-image-container {
+            width: 90%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #lightboxImage {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            transform: scale(0.9);
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        #lightboxImage.loaded {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: var(--light-text);
+            padding: 10px;
+            font-size: 1.2rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .gallery-carousel {
+                height: 300px;
+            }
+            
+            .gallery-thumbnail {
+                width: 60px;
+                height: 45px;
+            }
+            
+            .gallery-control {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            
+            .lightbox-prev,
+            .lightbox-next {
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-carousel {
+                height: 250px;
+            }
+            
+            .gallery-thumbnails {
+                gap: 5px;
+            }
+            
+            .gallery-thumbnail {
+                width: 50px;
+                height: 37px;
+            }
+        }
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -1070,24 +1631,45 @@
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">Photo Gallery</h2>
             <span class="ornament">❧</span>
-            <div class="gallery">
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="a.jpg" alt="Rev. Mrs. Lucy Derbi-Nyarko speaking at church">
+            
+            <!-- Gallery Controls -->
+            <div class="gallery-controls">
+                <button class="gallery-control" id="galleryPrev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="gallery-control" id="galleryNext">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <!-- Main Gallery Carousel -->
+            <div class="gallery-carousel" id="galleryCarousel">
+                <div class="gallery-track" id="galleryTrack">
+                    <!-- Images will be loaded here by JavaScript -->
                 </div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="b.jpg" alt="Rev. Mrs. Lucy Derbi-Nyarko worshiping with others">
-                </div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="a.jpg" alt="Rev. Mrs. Lucy Derbi-Nyarko with microphone">
-                </div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="b.jpg" alt="Rev. Mrs. Lucy Derbi-Nyarko in leopard print outfit">
-                </div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
-                    <img src="a.jpg" alt="Rev. Mrs. Lucy Derbi-Nyarko at service">
-                </div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
-                    <img src="b.jpg" alt="Rev. Mrs. Lucy Derbi-Nyarko with hands raised">
+            </div>
+            
+            <!-- Thumbnail Navigation -->
+            <div class="gallery-thumbnails" id="galleryThumbnails">
+                <!-- Thumbnails will be loaded here by JavaScript -->
+            </div>
+            
+            <!-- Lightbox -->
+            <div class="gallery-lightbox" id="galleryLightbox">
+                <div class="lightbox-content">
+                    <button class="lightbox-close" id="lightboxClose">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button class="lightbox-prev" id="lightboxPrev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="lightbox-next" id="lightboxNext">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <div class="lightbox-image-container">
+                        <img src="" alt="" id="lightboxImage">
+                    </div>
+                    <div class="lightbox-caption" id="lightboxCaption"></div>
                 </div>
             </div>
         </div>
@@ -1317,6 +1899,244 @@
                 const img = new Image();
                 img.src = url;
             });
+        });
+
+        // Gallery functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Image data - Use a.jpg to z.jpg
+            const images = [];
+            const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+            
+            // Generate image data from a.jpg to z.jpg
+            for (let i = 0; i < alphabet.length; i++) {
+                const letter = alphabet.charAt(i);
+                images.push({
+                    src: `${letter}.jpg`,
+                    alt: `Rev. Mrs. Lucy Derbi-Nyarko memorial image ${i+1}`
+                });
+            }
+            
+            // DOM Elements
+            const galleryTrack = document.getElementById('galleryTrack');
+            const galleryThumbnails = document.getElementById('galleryThumbnails');
+            const galleryPrev = document.getElementById('galleryPrev');
+            const galleryNext = document.getElementById('galleryNext');
+            const lightbox = document.getElementById('galleryLightbox');
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxCaption = document.getElementById('lightboxCaption');
+            const lightboxClose = document.getElementById('lightboxClose');
+            const lightboxPrev = document.getElementById('lightboxPrev');
+            const lightboxNext = document.getElementById('lightboxNext');
+            
+            // State
+            let currentIndex = 0;
+            
+            // Initialize gallery
+            function initGallery() {
+                // Populate gallery with images
+                images.forEach((image, index) => {
+                    // Create main carousel slide
+                    const slide = document.createElement('div');
+                    slide.className = 'gallery-slide';
+                    slide.innerHTML = `<img src="${image.src}" alt="${image.alt}" loading="lazy">`;
+                    galleryTrack.appendChild(slide);
+                    
+                    // Create thumbnail
+                    const thumbnail = document.createElement('div');
+                    thumbnail.className = 'gallery-thumbnail';
+                    thumbnail.innerHTML = `<img src="${image.src}" alt="Thumbnail ${index+1}" loading="lazy">`;
+                    
+                    if (index === 0) {
+                        thumbnail.classList.add('active');
+                    }
+                    
+                    thumbnail.addEventListener('click', () => {
+                        currentIndex = index;
+                        updateGallery();
+                    });
+                    
+                    galleryThumbnails.appendChild(thumbnail);
+                    
+                    // Add click event to open lightbox
+                    slide.addEventListener('click', () => {
+                        openLightbox(index);
+                    });
+                });
+                
+                // Update the gallery to the initial state
+                updateGallery();
+            }
+            
+            // Update gallery based on current index
+            function updateGallery() {
+                // Update main carousel position
+                galleryTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Update thumbnails active state
+                const thumbnails = document.querySelectorAll('.gallery-thumbnail');
+                thumbnails.forEach((thumb, index) => {
+                    if (index === currentIndex) {
+                        thumb.classList.add('active');
+                    } else {
+                        thumb.classList.remove('active');
+                    }
+                });
+                
+                // Scroll the active thumbnail into view
+                const activeThumbnail = thumbnails[currentIndex];
+                if (activeThumbnail) {
+                    const thumbnailsContainer = galleryThumbnails;
+                    const scrollLeft = activeThumbnail.offsetLeft - (thumbnailsContainer.clientWidth / 2) + (activeThumbnail.clientWidth / 2);
+                    thumbnailsContainer.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+                }
+            }
+            
+            // Navigation functions
+            function navigateNext() {
+                currentIndex = (currentIndex + 1) % images.length;
+                updateGallery();
+            }
+            
+            function navigatePrev() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateGallery();
+            }
+            
+            // Lightbox functions
+            function openLightbox(index) {
+                currentIndex = index;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+                updateLightbox();
+            }
+            
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = ''; // Re-enable scrolling
+            }
+            
+            function updateLightbox() {
+                const image = images[currentIndex];
+                // Remove loaded class first
+                lightboxImage.classList.remove('loaded');
+                
+                // Update image after a short delay to allow for transition
+                setTimeout(() => {
+                    lightboxImage.src = image.src;
+                    lightboxImage.alt = image.alt;
+                    lightboxCaption.textContent = `Image ${currentIndex + 1} of ${images.length}`;
+                    
+                    // Add loaded class after image is loaded
+                    lightboxImage.onload = () => {
+                        lightboxImage.classList.add('loaded');
+                    };
+                }, 300);
+            }
+            
+            // Event listeners
+            galleryPrev.addEventListener('click', navigatePrev);
+            galleryNext.addEventListener('click', navigateNext);
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightboxPrev.addEventListener('click', () => {
+                navigatePrev();
+                updateLightbox();
+            });
+            lightboxNext.addEventListener('click', () => {
+                navigateNext();
+                updateLightbox();
+            });
+            
+            // Close lightbox when clicking outside the image
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (lightbox.classList.contains('active')) {
+                    if (e.key === 'Escape') {
+                        closeLightbox();
+                    } else if (e.key === 'ArrowRight') {
+                        navigateNext();
+                        updateLightbox();
+                    } else if (e.key === 'ArrowLeft') {
+                        navigatePrev();
+                        updateLightbox();
+                    }
+                }
+            });
+            
+            // Touch events for mobile swiping
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            galleryTrack.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            galleryTrack.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+            
+            lightbox.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            lightbox.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                if (touchEndX < touchStartX - swipeThreshold) {
+                    // Swipe left, go next
+                    if (lightbox.classList.contains('active')) {
+                        navigateNext();
+                        updateLightbox();
+                    } else {
+                        navigateNext();
+                    }
+                }
+                if (touchEndX > touchStartX + swipeThreshold) {
+                    // Swipe right, go previous
+                    if (lightbox.classList.contains('active')) {
+                        navigatePrev();
+                        updateLightbox();
+                    } else {
+                        navigatePrev();
+                    }
+                }
+            }
+            
+            // Auto-play functionality (can be disabled if not desired)
+            let autoplayInterval;
+            
+            function startAutoplay() {
+                autoplayInterval = setInterval(() => {
+                    navigateNext();
+                }, 5000); // Change slide every 5 seconds
+            }
+            
+            function stopAutoplay() {
+                clearInterval(autoplayInterval);
+            }
+            
+            // Start autoplay by default
+            startAutoplay();
+            
+            // Pause autoplay on hover/interaction
+            const galleryCarousel = document.getElementById('galleryCarousel');
+            
+            galleryCarousel.addEventListener('mouseenter', stopAutoplay);
+            galleryCarousel.addEventListener('mouseleave', startAutoplay);
+            galleryCarousel.addEventListener('touchstart', stopAutoplay);
+            
+            // Initialize the gallery
+            initGallery();
         });
     </script>
 </body>
