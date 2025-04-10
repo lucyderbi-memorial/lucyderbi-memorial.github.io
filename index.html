@@ -630,7 +630,7 @@
                 border-radius: 10px;
             }
         }
-                /* Gallery Styling */
+        /* Gallery Styling */
         .gallery-controls {
             display: flex;
             justify-content: space-between;
@@ -2136,351 +2136,351 @@
         }
 
         /* Childhood Friend & Colleague Tribute Styling */
-.friend-tribute {
-    margin-top: 60px;
-    background-color: var(--program-bg);
-    border: none;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-    position: relative;
-}
-
-.friend-tribute::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: linear-gradient(to right, #FFC107, #D4AF37, #FFC107);
-}
-
-.friend-tribute .tribute-header {
-    background: linear-gradient(to right, #4A3933, #7D5A50);
-    padding: 35px;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-}
-
-.friend-tribute-pattern {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
-        linear-gradient(-45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.05) 75%),
-        linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.05) 75%);
-    background-size: 20px 20px;
-    opacity: 0.5;
-}
-
-.friend-tribute .tribute-icon {
-    position: absolute;
-    top: 50%;
-    left: 25px;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    color: rgba(229, 178, 153, 0.7);
-    z-index: 5;
-}
-
-.friend-tribute .tribute-header h3 {
-    position: relative;
-    z-index: 2;
-    font-size: 2rem;
-    color: var(--light-text);
-    margin: 0 0 10px 0;
-    font-family: 'Playfair Display', serif;
-    letter-spacing: 1px;
-}
-
-.tribute-relationship {
-    position: relative;
-    z-index: 2;
-    color: var(--secondary-color);
-    margin: 0;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
-
-.friend-tribute .tribute-content {
-    padding: 40px;
-    position: relative;
-    background: linear-gradient(to bottom, rgba(252, 222, 192, 0.08), rgba(255, 255, 255, 1));
-}
-
-.friend-tribute-intro {
-    font-family: 'Lora', serif;
-    font-size: 1.15rem;
-    color: var(--primary-color);
-    line-height: 1.8;
-    margin-bottom: 25px;
-    padding-left: 20px;
-    border-left: 3px solid #D4AF37;
-}
-
-.scripture-verse {
-    background-color: rgba(252, 222, 192, 0.15);
-    padding: 25px;
-    margin: 30px 0;
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-}
-
-.scripture-verse::before,
-.scripture-verse::after {
-    content: '"';
-    font-family: 'Georgia', serif;
-    font-size: 4rem;
-    color: rgba(212, 175, 55, 0.2);
-    position: absolute;
-    line-height: 0;
-}
-
-.scripture-verse::before {
-    top: 25px;
-    left: 10px;
-}
-
-.scripture-verse::after {
-    bottom: 5px;
-    right: 10px;
-    transform: rotate(180deg);
-}
-
-.verse-quote {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    font-style: italic;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-    line-height: the: 1.6;
-    position: relative;
-    z-index: 1;
-}
-
-.verse-reference {
-    font-family: 'Lora', serif;
-    font-size: 0.95rem;
-    color: var(--accent-color);
-}
-
-.friend-tribute p {
-    margin-bottom: 20px;
-    line-height: 1.8;
-    font-size: 1.05rem;
-    color: var(--text-color);
-    font-family: 'Lora', serif;
-}
-
-.tribute-memory-accent {
-    margin: 35px 0;
-    padding: 0 20px;
-    position: relative;
-}
-
-.memory-line {
-    height: 1px;
-    background: linear-gradient(to right, transparent, #D4AF37, transparent);
-    margin: 20px 0;
-}
-
-.tribute-memory-accent p {
-    text-align: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 1.15rem;
-    color: var(--primary-color);
-}
-
-.tribute-qualities {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin: 30px 0;
-}
-
-.tribute-qualities span {
-    background-color: rgba(229, 178, 153, 0.1);
-    padding: 8px 15px;
-    border-radius: 30px;
-    font-family: 'Cormorant Garamond', serif;
-    color: var(--primary-color);
-    font-size: 1rem;
-    border: 1px solid rgba(229, 178, 153, 0.3);
-}
-
-.farewell-container {
-    margin: 40px 0 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.farewell-ornament {
-    color: var(--gold);
-    font-size: 1.5rem;
-    margin: 10px 0;
-}
-
-.farewell-message {
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    background-color: rgba(252, 222, 192, 0.15);
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    border: 1px solid rgba(229, 178, 153, 0.2);
-}
-
-.farewell-message p {
-    margin-bottom: 8px;
-    font-size: 1.1rem;
-    color: var(--primary-color);
-}
-
-.farewell-message p:last-child {
-    margin-top: 15px;
-    font-style: italic;
-}
-
-.tribute-signature {
-    margin-top: 40px;
-    text-align: right;
-    font-family: 'Playfair Display', serif;
-    color: var(--primary-color);
-    position: relative;
-}
-
-.signature-line {
-    height: 1px;
-    background: linear-gradient(to right, transparent, rgba(229, 178, 153, 0.5));
-    margin-bottom: 20px;
-}
-
-.tribute-signature p {
-    margin-bottom: 5px;
-}
-
-.tribute-signature p:first-child {
-    font-style: italic;
-    opacity: 0.8;
-    font-size: 0.95rem;
-}
-
-.signatory {
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-
-@media (max-width: 768px) {
-    .friend-tribute .tribute-header h3 {
-        font-size: 1.8rem;
+    .friend-tribute {
+        margin-top: 60px;
+        background-color: var(--program-bg);
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        position: relative;
     }
     
-    .tribute-relationship {
-        font-size: 1.1rem;
+    .friend-tribute::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: linear-gradient(to right, #FFC107, #D4AF37, #FFC107);
     }
     
-    .friend-tribute .tribute-content {
-        padding: 30px 25px;
+    .friend-tribute .tribute-header {
+        background: linear-gradient(to right, #4A3933, #7D5A50);
+        padding: 35px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
     }
     
-    .friend-tribute-intro {
-        font-size: 1.1rem;
-    }
-    
-    .scripture-verse {
-        padding: 20px;
-    }
-    
-    .verse-quote {
-        font-size: 1.1rem;
-    }
-    
-    .tribute-memory-accent {
-        padding: 0 10px;
-    }
-    
-    .tribute-qualities {
-        gap: 10px;
-    }
-    
-    .tribute-qualities span {
-        padding: 6px 12px;
-        font-size: 0.9rem;
-    }
-    
-    .farewell-message {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .friend-tribute .tribute-header h3 {
-        font-size: 1.5rem;
+    .friend-tribute-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+            linear-gradient(-45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+            linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.05) 75%),
+            linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.05) 75%);
+        background-size: 20px 20px;
+        opacity: 0.5;
     }
     
     .friend-tribute .tribute-icon {
-        display: none;
+        position: absolute;
+        top: 50%;
+        left: 25px;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        color: rgba(229, 178, 153, 0.7);
+        z-index: 5;
+    }
+    
+    .friend-tribute .tribute-header h3 {
+        position: relative;
+        z-index: 2;
+        font-size: 2rem;
+        color: var(--light-text);
+        margin: 0 0 10px 0;
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 1px;
     }
     
     .tribute-relationship {
-        font-size: 1rem;
+        position: relative;
+        z-index: 2;
+        color: var(--secondary-color);
+        margin: 0;
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        font-size: 1.2rem;
+        opacity: 0.9;
     }
     
     .friend-tribute .tribute-content {
-        padding: 25px 20px;
+        padding: 40px;
+        position: relative;
+        background: linear-gradient(to bottom, rgba(252, 222, 192, 0.08), rgba(255, 255, 255, 1));
     }
     
     .friend-tribute-intro {
-        font-size: 1.05rem;
-        padding-left: 15px;
+        font-family: 'Lora', serif;
+        font-size: 1.15rem;
+        color: var(--primary-color);
+        line-height: 1.8;
+        margin-bottom: 25px;
+        padding-left: 20px;
+        border-left: 3px solid #D4AF37;
     }
     
     .scripture-verse {
-        padding: 20px 15px;
-    }
-    
-    .verse-quote {
-        font-size: 1rem;
+        background-color: rgba(252, 222, 192, 0.15);
+        padding: 25px;
+        margin: 30px 0;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
     }
     
     .scripture-verse::before,
     .scripture-verse::after {
-        font-size: 3rem;
+        content: '"';
+        font-family: 'Georgia', serif;
+        font-size: 4rem;
+        color: rgba(212, 175, 55, 0.2);
+        position: absolute;
+        line-height: 0;
+    }
+    
+    .scripture-verse::before {
+        top: 25px;
+        left: 10px;
+    }
+    
+    .scripture-verse::after {
+        bottom: 5px;
+        right: 10px;
+        transform: rotate(180deg);
+    }
+    
+    .verse-quote {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.2rem;
+        font-style: italic;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        line-height: the: 1.6;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .verse-reference {
+        font-family: 'Lora', serif;
+        font-size: 0.95rem;
+        color: var(--accent-color);
+    }
+    
+    .friend-tribute p {
+        margin-bottom: 20px;
+        line-height: 1.8;
+        font-size: 1.05rem;
+        color: var(--text-color);
+        font-family: 'Lora', serif;
+    }
+    
+    .tribute-memory-accent {
+        margin: 35px 0;
+        padding: 0 20px;
+        position: relative;
+    }
+    
+    .memory-line {
+        height: 1px;
+        background: linear-gradient(to right, transparent, #D4AF37, transparent);
+        margin: 20px 0;
     }
     
     .tribute-memory-accent p {
-        font-size: 1.05rem;
+        text-align: center;
+        font-family: 'Cormorant Garamond', serif;
+        font-style: italic;
+        font-size: 1.15rem;
+        color: var(--primary-color);
     }
     
     .tribute-qualities {
-        gap: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin: 30px 0;
     }
     
     .tribute-qualities span {
-        padding: 5px 10px;
-        font-size: 0.85rem;
+        background-color: rgba(229, 178, 153, 0.1);
+        padding: 8px 15px;
+        border-radius: 30px;
+        font-family: 'Cormorant Garamond', serif;
+        color: var(--primary-color);
+        font-size: 1rem;
+        border: 1px solid rgba(229, 178, 153, 0.3);
+    }
+    
+    .farewell-container {
+        margin: 40px 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .farewell-ornament {
+        color: var(--gold);
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+    
+    .farewell-message {
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        background-color: rgba(252, 222, 192, 0.15);
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        border: 1px solid rgba(229, 178, 153, 0.2);
     }
     
     .farewell-message p {
-        font-size: 1rem;
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+        color: var(--primary-color);
     }
-}
+    
+    .farewell-message p:last-child {
+        margin-top: 15px;
+        font-style: italic;
+    }
+    
+    .tribute-signature {
+        margin-top: 40px;
+        text-align: right;
+        font-family: 'Playfair Display', serif;
+        color: var(--primary-color);
+        position: relative;
+    }
+    
+    .signature-line {
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(229, 178, 153, 0.5));
+        margin-bottom: 20px;
+    }
+    
+    .tribute-signature p {
+        margin-bottom: 5px;
+    }
+    
+    .tribute-signature p:first-child {
+        font-style: italic;
+        opacity: 0.8;
+        font-size: 0.95rem;
+    }
+    
+    .signatory {
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+    
+    @media (max-width: 768px) {
+        .friend-tribute .tribute-header h3 {
+            font-size: 1.8rem;
+        }
+        
+        .tribute-relationship {
+            font-size: 1.1rem;
+        }
+        
+        .friend-tribute .tribute-content {
+            padding: 30px 25px;
+        }
+        
+        .friend-tribute-intro {
+            font-size: 1.1rem;
+        }
+        
+        .scripture-verse {
+            padding: 20px;
+        }
+        
+        .verse-quote {
+            font-size: 1.1rem;
+        }
+        
+        .tribute-memory-accent {
+            padding: 0 10px;
+        }
+        
+        .tribute-qualities {
+            gap: 10px;
+        }
+        
+        .tribute-qualities span {
+            padding: 6px 12px;
+            font-size: 0.9rem;
+        }
+        
+        .farewell-message {
+            padding: 20px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .friend-tribute .tribute-header h3 {
+            font-size: 1.5rem;
+        }
+        
+        .friend-tribute .tribute-icon {
+            display: none;
+        }
+        
+        .tribute-relationship {
+            font-size: 1rem;
+        }
+        
+        .friend-tribute .tribute-content {
+            padding: 25px 20px;
+        }
+        
+        .friend-tribute-intro {
+            font-size: 1.05rem;
+            padding-left: 15px;
+        }
+        
+        .scripture-verse {
+            padding: 20px 15px;
+        }
+        
+        .verse-quote {
+            font-size: 1rem;
+        }
+        
+        .scripture-verse::before,
+        .scripture-verse::after {
+            font-size: 3rem;
+        }
+        
+        .tribute-memory-accent p {
+            font-size: 1.05rem;
+        }
+        
+        .tribute-qualities {
+            gap: 8px;
+        }
+        
+        .tribute-qualities span {
+            padding: 5px 10px;
+            font-size: 0.85rem;
+        }
+        
+        .farewell-message p {
+            font-size: 1rem;
+        }
+    }
     </style>
 </head>
 <body>
@@ -2876,76 +2876,76 @@
         </div>
 
         <!-- Son-in-Law Tribute -->
-            <div class="tribute-card son-in-law-tribute" data-aos="fade-up">
-                <div class="tribute-header">
-                    <div class="tribute-header-overlay"></div>
-                    <span class="tribute-icon"><i class="fas fa-user-tie"></i></span>
-                    <h3>TRIBUTE BY SON-IN-LAW</h3>
-                    <span class="quote-icon"><i class="fas fa-quote-right"></i></span>
+        <div class="tribute-card son-in-law-tribute" data-aos="fade-up">
+            <div class="tribute-header">
+                <div class="tribute-header-overlay"></div>
+                <span class="tribute-icon"><i class="fas fa-user-tie"></i></span>
+                <h3>TRIBUTE BY SON-IN-LAW</h3>
+                <span class="quote-icon"><i class="fas fa-quote-right"></i></span>
+            </div>
+            <div class="tribute-content">
+                <div class="son-in-law-intro">
+                    <p><span class="first-letter">M</span>ama Lucy, as you are affectionately called; I encountered you about 20 years ago when I presented myself and asked to marry your daughter Hagar.</p>
                 </div>
-                <div class="tribute-content">
-                    <div class="son-in-law-intro">
-                        <p><span class="first-letter">M</span>ama Lucy, as you are affectionately called; I encountered you about 20 years ago when I presented myself and asked to marry your daughter Hagar.</p>
-                    </div>
-                    
-                    <div class="tribute-paragraphs">
-                        <div class="read-more-content" id="tribute-son-in-law">
-                            <p>At the time you had just left London for Ghana so this meeting was not in person. However, I immediately sensed and experienced your dedication to family, pragmatism and the fact that you believed that if something has to be done, it must be done well.</p>
-                            
-                            <p>The subsequent meetings and 'interviews' and background checks with Pastor Gospel, in whose care you had left your daughter, made it clear to me that you wouldn't just accept and take anyone as a son-in-law just for the sake of it. When I finally met you in Accra some months after we got married, I had a confirmation of the thoughts I had about you, and you sealed it with a warm and a gentle welcome.</p>
-                            
-                            <div class="tribute-memory">
-                                <div class="memory-icon"><i class="fas fa-heart"></i></div>
-                                <p>You talked with me as a son, explaining and showing me how to navigate through marriage life. You made me feel at ease and comfortable. At this time my anx and nerves of meeting my mother-in-law the first time fell off. You made me feel like I were your own son and I felt comfortable with you as I would my own mum. From here on our relationship would be better described as mother and son.</p>
-                            </div>
-                            
-                            <p>This encounter with you gave me a practical understanding when my mum, siblings, uncles and other family members tell me that you are a warm-hearted person who treats them exceptionally well and make them feel special anytime they meet with you. Mama Lucy, you cared not only for me but also everyone I cared about.</p>
-                            
-                            <p>When I visited your home in Sunyani, to my surprise, I saw a portrait of myself in your living room. I stood in a careful silent gaze of my portrait to make sure it was really me.</p>
-                            
-                            <p>And you placed it amongst the portraits of people who are dear to your heart. I did make a gracious comment on seeing my portrait but what I did not reveal was how chaffed I was, and how surprised I was with the confidence you had in seeing my photo perhaps several times every day in your home. I thought to myself this lady might have seen something in me that I have probably not seen.</p>
-                            
-                            <div class="tribute-memory">
-                                <div class="memory-icon"><i class="fas fa-home"></i></div>
-                                <p>During our recent visit to Ghana, you left your busy schedule to meet us in Accra, spent some days with us, before accompanying us to Kumasi and then welcoming us to your home in Sunyani. You gave me your own private car to move around with. You introduced me to any family and friends you could find. You practically showed me everywhere I know in Sunyani.</p>
-                            </div>
-                            
-                            <p>One of the many memories of you that has stuck with me is when I got sick in Ghana and couldn't eat, You prepared for me your special potent pepper soup that took away my flu and restored my appetite. And I'm glad to say that since then I haven't had any of such symptoms again.</p>
-                            
-                            <p>Your heart was so big, it had a place for all. I remember when we organised a birthday party for Josh, Priscilla and Linda. After the food was set and everyone was getting ready to enjoy, you took your car and excused everyone saying you'll be back soon. You did come back soon, but you didn't come alone. You brought with you many children, from where, nobody knew, to come to join in and enjoy the party. Everyone asked you where you had brought the children from. These children were not part of your own family but you graciously thought about them to bring some happiness to their lives. You showed us what a generous person you were. Whilst all of us were thinking about ourselves, focusing on how we were going to enjoy ourselves, you were thinking of other children you felt needed some much love and delicious food.</p>
-                            
-                            <div class="tribute-highlight">
-                                <p>You were really a mother to many and a mother to all.</p>
-                            </div>
-                            
-                            <p>You truly loved God and served Him well with all dedication and diligence. This translated to the love you had for all manner of people. You inspired me and my family by your constant prayers, pieces of advice and lessons from your own life and experiences. Anytime we spoke with you, you would ask Michelle and Josh about their progress in school and encouraged them to work harder and smarter to become the great people God has made them to be. You would say this would make you proud.</p>
-                            
-                            <p>Your attitude to hard work, business and excellence was a quality we will continue to cherish.</p>
-                            
-                            <div class="tribute-memory">
-                                <div class="memory-icon"><i class="fas fa-child"></i></div>
-                                <p>In our short stay with you, you had unconsciously inspired Josh with your passion, enthusiasm and instruction in business that he was very happy to stay behind in Ghana to continue to do business with you. Even at the airport, on our return, he pleaded with us to allow him to go back and help you with your businesses.</p>
-                            </div>
-                            
-                            <p>And when we returned to England, he will occasionally call you to ask how the business is going. You would take your time to teach and explain to him what has been going on in the business during the past few weeks.</p>
-                            
-                            <p>Mama Lucy, you have left a lasting legacy. Not just in the physical but also the intangibles, in your children, family, the church and in all you encountered. This means that even though you are no more here with us. You still live on through the impact you have had in the lives of many people you influenced.</p>
-                            
-                            <p>Mama Lucy, you have lived a good and a fulfilling life. All of us would have loved for you to live much longer on earth than you did. But we acknowledge the sovereignty of God and the fact that He has much better plans for you and for us so we won't argue with Him on this.</p>
-                            
-                            <div class="tribute-highlight final-message">
-                                <p>You loved and treated me like a son. I love and regard you as my mum. You will forever remain in my heart.</p>
-                            </div>
-                            
-                            <p>We have lost you, and it saddens our hearts. But heaven has gained you. It is also your gain because you are in a far better place. For this we are glad, and we hope in the promise of our Lord Jesus Christ who says we, who believe in Him and have trusted Him for eternal life will live, even though we die. This great promise is true for you, for us and all those who will believe and trust Jesus for their eternal salvation.</p>
-                            
-                            <p>Maa Lucy, you have gone ahead of us. Rest well with the Lord till we meet again.</p>
+                
+                <div class="tribute-paragraphs">
+                    <div class="read-more-content" id="tribute-son-in-law">
+                        <p>At the time you had just left London for Ghana so this meeting was not in person. However, I immediately sensed and experienced your dedication to family, pragmatism and the fact that you believed that if something has to be done, it must be done well.</p>
+                        
+                        <p>The subsequent meetings and 'interviews' and background checks with Pastor Gospel, in whose care you had left your daughter, made it clear to me that you wouldn't just accept and take anyone as a son-in-law just for the sake of it. When I finally met you in Accra some months after we got married, I had a confirmation of the thoughts I had about you, and you sealed it with a warm and a gentle welcome.</p>
+                        
+                        <div class="tribute-memory">
+                            <div class="memory-icon"><i class="fas fa-heart"></i></div>
+                            <p>You talked with me as a son, explaining and showing me how to navigate through marriage life. You made me feel at ease and comfortable. At this time my anx and nerves of meeting my mother-in-law the first time fell off. You made me feel like I were your own son and I felt comfortable with you as I would my own mum. From here on our relationship would be better described as mother and son.</p>
                         </div>
                         
-                        <span class="read-more-toggle" data-target="tribute-son-in-law">
-                            Read Full Tribute <i class="fas fa-chevron-down"></i>
-                        </span>
+                        <p>This encounter with you gave me a practical understanding when my mum, siblings, uncles and other family members tell me that you are a warm-hearted person who treats them exceptionally well and make them feel special anytime they meet with you. Mama Lucy, you cared not only for me but also everyone I cared about.</p>
+                        
+                        <p>When I visited your home in Sunyani, to my surprise, I saw a portrait of myself in your living room. I stood in a careful silent gaze of my portrait to make sure it was really me.</p>
+                        
+                        <p>And you placed it amongst the portraits of people who are dear to your heart. I did make a gracious comment on seeing my portrait but what I did not reveal was how chaffed I was, and how surprised I was with the confidence you had in seeing my photo perhaps several times every day in your home. I thought to myself this lady might have seen something in me that I have probably not seen.</p>
+                        
+                        <div class="tribute-memory">
+                            <div class="memory-icon"><i class="fas fa-home"></i></div>
+                            <p>During our recent visit to Ghana, you left your busy schedule to meet us in Accra, spent some days with us, before accompanying us to Kumasi and then welcoming us to your home in Sunyani. You gave me your own private car to move around with. You introduced me to any family and friends you could find. You practically showed me everywhere I know in Sunyani.</p>
+                        </div>
+                        
+                        <p>One of the many memories of you that has stuck with me is when I got sick in Ghana and couldn't eat, You prepared for me your special potent pepper soup that took away my flu and restored my appetite. And I'm glad to say that since then I haven't had any of such symptoms again.</p>
+                        
+                        <p>Your heart was so big, it had a place for all. I remember when we organised a birthday party for Josh, Priscilla and Linda. After the food was set and everyone was getting ready to enjoy, you took your car and excused everyone saying you'll be back soon. You did come back soon, but you didn't come alone. You brought with you many children, from where, nobody knew, to come to join in and enjoy the party. Everyone asked you where you had brought the children from. These children were not part of your own family but you graciously thought about them to bring some happiness to their lives. You showed us what a generous person you were. Whilst all of us were thinking about ourselves, focusing on how we were going to enjoy ourselves, you were thinking of other children you felt needed some much love and delicious food.</p>
+                        
+                        <div class="tribute-highlight">
+                            <p>You were really a mother to many and a mother to all.</p>
+                        </div>
+                        
+                        <p>You truly loved God and served Him well with all dedication and diligence. This translated to the love you had for all manner of people. You inspired me and my family by your constant prayers, pieces of advice and lessons from your own life and experiences. Anytime we spoke with you, you would ask Michelle and Josh about their progress in school and encouraged them to work harder and smarter to become the great people God has made them to be. You would say this would make you proud.</p>
+                        
+                        <p>Your attitude to hard work, business and excellence was a quality we will continue to cherish.</p>
+                        
+                        <div class="tribute-memory">
+                            <div class="memory-icon"><i class="fas fa-child"></i></div>
+                            <p>In our short stay with you, you had unconsciously inspired Josh with your passion, enthusiasm and instruction in business that he was very happy to stay behind in Ghana to continue to do business with you. Even at the airport, on our return, he pleaded with us to allow him to go back and help you with your businesses.</p>
+                        </div>
+                        
+                        <p>And when we returned to England, he will occasionally call you to ask how the business is going. You would take your time to teach and explain to him what has been going on in the business during the past few weeks.</p>
+                        
+                        <p>Mama Lucy, you have left a lasting legacy. Not just in the physical but also the intangibles, in your children, family, the church and in all you encountered. This means that even though you are no more here with us. You still live on through the impact you have had in the lives of many people you influenced.</p>
+                        
+                        <p>Mama Lucy, you have lived a good and a fulfilling life. All of us would have loved for you to live much longer on earth than you did. But we acknowledge the sovereignty of God and the fact that He has much better plans for you and for us so we won't argue with Him on this.</p>
+                        
+                        <div class="tribute-highlight final-message">
+                            <p>You loved and treated me like a son. I love and regard you as my mum. You will forever remain in my heart.</p>
+                        </div>
+                        
+                        <p>We have lost you, and it saddens our hearts. But heaven has gained you. It is also your gain because you are in a far better place. For this we are glad, and we hope in the promise of our Lord Jesus Christ who says we, who believe in Him and have trusted Him for eternal life will live, even though we die. This great promise is true for you, for us and all those who will believe and trust Jesus for their eternal salvation.</p>
+                        
+                        <p>Maa Lucy, you have gone ahead of us. Rest well with the Lord till we meet again.</p>
                     </div>
+                    
+                    <span class="read-more-toggle" data-target="tribute-son-in-law">
+                        Read Full Tribute <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
                     
                     <div class="tribute-signature">
                         <p>With eternal gratitude and love,<br>Michael</p>
@@ -2956,7 +2956,7 @@
                 </div>
             </div>
 
-            <!-- Grandson's Tribute - Add this inside your tributes section after the existing tributes -->
+            <!-- Grandson's Tribute -->
             <div class="tribute-card grandson-tribute" data-aos="fade-up">
                 <div class="tribute-header">
                     <div class="tribute-header-pattern"></div>
@@ -3066,7 +3066,7 @@
                 </div>
             </div>
 
-            <!-- Childhood Friend & Colleague Tribute - Add this inside your tributes section after the existing tributes -->
+            <!-- Childhood Friend & Colleague Tribute -->
             <div class="tribute-card friend-tribute" data-aos="fade-up">
                 <div class="tribute-header">
                     <div class="friend-tribute-pattern"></div>
@@ -3291,11 +3291,9 @@
 
         // Gallery functionality
         document.addEventListener('DOMContentLoaded', function() {
-            // Image data - Use a.jpg to z.jpg
             const images = [];
             const alphabet = 'abcdefghijklmnopqrstuvwxyz';
             
-            // Generate image data from a.jpg to z.jpg
             for (let i = 0; i < alphabet.length; i++) {
                 const letter = alphabet.charAt(i);
                 images.push({
