@@ -1436,199 +1436,704 @@
         }
 
         /* Biography Section Styling */
-.biography {
-    background-color: var(--light-text);
-    padding: 100px 0;
+        .biography {
+            background-color: var(--light-text);
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .biography::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('b.jpg') center/cover no-repeat fixed;
+            opacity: 0.04;
+            z-index: 0;
+        }
+
+        .biography-container {
+            position: relative;
+            z-index: 1;
+            background-color: var(--program-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .biography-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 40px;
+            background: linear-gradient(to right, rgba(252, 222, 192, 0.2), rgba(252, 222, 192, 0.1));
+            border-bottom: 1px solid rgba(229, 178, 153, 0.3);
+        }
+
+        .biography-image {
+            flex: 0 0 200px;
+            margin-right: 40px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border: 5px solid white;
+        }
+
+        .biography-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: all 0.5s ease;
+        }
+
+        .biography-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .biography-intro {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .biography-intro h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .birth-dates {
+            font-family: 'Lora', serif;
+            color: var(--text-color);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .aka {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        .biography-content {
+            padding: 40px;
+        }
+
+        .biography-content p {
+            font-family: 'Lora', serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .biography-milestone {
+            margin: 30px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(229, 178, 153, 0.3);
+        }
+
+        .biography-milestone h4 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            font-family: 'Playfair Display', serif;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .biography-milestone h4::before {
+            content: '❖';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 0.9rem;
+        }
+
+        .biography-farewell {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: rgba(252, 222, 192, 0.15);
+            border-radius: 10px;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .biography-farewell p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .biography-farewell p:last-child {
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+
+        @media (max-width: 992px) {
+            .biography-header {
+                padding: 30px;
+            }
+            
+            .biography-image {
+                flex: 0 0 150px;
+                margin-right: 30px;
+            }
+            
+            .biography-intro h3 {
+                font-size: 1.8rem;
+            }
+            
+            .biography-content {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .biography-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .biography-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            .biography-milestone h4 {
+                padding-left: 25px;
+            }
+            
+            .biography-content {
+                padding: 25px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .biography-header {
+                padding: 20px;
+            }
+            
+            .biography-intro h3 {
+                font-size: 1.6rem;
+            }
+            
+            .birth-dates, .aka {
+                font-size: 1rem;
+            }
+            
+            .biography-milestone h4 {
+                font-size: 1.3rem;
+            }
+        }
+        /* Son-in-Law Tribute Styling */
+        .son-in-law-tribute {
+            margin-top: 60px;
+            background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.98));
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .son-in-law-tribute::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary-color), var(--gold));
+        }
+
+        .son-in-law-tribute .tribute-header {
+            background: linear-gradient(145deg, #7D5A50, #4A3933);
+            padding: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tribute-header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('b.jpg') center/cover no-repeat;
+            opacity: 0.1;
+            mix-blend-mode: overlay;
+        }
+
+        .son-in-law-tribute .tribute-icon {
+            position: absolute;
+            top: 50%;
+            left: 25px;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: rgba(229, 178, 153, 0.7);
+            z-index: 5;
+        }
+
+        .son-in-law-tribute .quote-icon {
+            position: absolute;
+            top: 50%;
+            right: 25px;
+            transform: translateY(-50%);
+            font-size: 2.5rem;
+            opacity: 0.3;
+        }
+
+        .son-in-law-tribute .tribute-header h3 {
+            position: relative;
+            z-index: 10;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .son-in-law-tribute .tribute-content {
+            padding: 40px;
+            position: relative;
+        }
+
+        .son-in-law-intro {
+            font-size: 1.2rem;
+            font-family: 'Lora', serif;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            line-height: 1.8;
+            padding-left: 15px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .first-letter {
+            font-size: 3.5rem;
+            font-family: 'Playfair Display', serif;
+            float: left;
+            line-height: 0.8;
+            margin-right: 8px;
+            color: var(--primary-color);
+        }
+
+        .tribute-paragraphs {
+            font-family: 'Lora', serif;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .tribute-paragraphs p {
+            margin-bottom: 20px;
+        }
+
+        .tribute-memory {
+            background-color: rgba(252, 222, 192, 0.15);
+            padding: 25px 25px 25px 70px;
+            margin: 30px 0;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .memory-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 36px;
+            height: 36px;
+            background-color: rgba(229, 178, 153, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+        }
+
+        .tribute-highlight {
+            margin: 30px 0;
+            padding: 25px;
+            background: linear-gradient(to right, rgba(125, 90, 80, 0.05), rgba(125, 90, 80, 0.02));
+            border-left: 3px solid var(--primary-color);
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--primary-color);
+            font-weight: 500;
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .final-message {
+            background: linear-gradient(to right, rgba(212, 175, 55, 0.08), rgba(212, 175, 55, 0.03));
+            border-left-color: var(--gold);
+        }
+
+        .tribute-signature {
+            margin-top: 40px;
+            text-align: right;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            padding-top: 20px;
+            border-top: 1px solid rgba(229, 178, 153, 0.3);
+        }
+
+        .signature-icon {
+            margin-top: 12px;
+            font-size: 1.3rem;
+            color: var(--gold);
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .son-in-law-tribute .tribute-header h3 {
+                font-size: 1.8rem;
+            }
+            
+            .son-in-law-tribute .tribute-icon,
+            .son-in-law-tribute .quote-icon {
+                display: none;
+            }
+            
+            .son-in-law-intro {
+                font-size: 1.1rem;
+            }
+            
+            .first-letter {
+                font-size: 2.8rem;
+            }
+            
+            .tribute-memory {
+                padding: 20px 20px 20px 60px;
+            }
+            
+            .memory-icon {
+                left: 15px;
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .son-in-law-tribute .tribute-header h3 {
+                font-size: 1.5rem;
+            }
+            
+            .son-in-law-tribute .tribute-content {
+                padding: 25px 20px;
+            }
+            
+            .first-letter {
+                font-size: 2.5rem;
+            }
+            
+            .tribute-memory {
+                padding: 15px 15px 15px 50px;
+            }
+            
+            .memory-icon {
+                width: 25px;
+                height: 25px;
+            }
+            
+            .tribute-highlight {
+                font-size: 1.1rem;
+                padding: 20px 15px;
+            }
+        }
+
+        /* Grandson's Tribute Styling */
+.grandson-tribute {
+    margin-top: 60px;
+    background-color: var(--program-bg);
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     position: relative;
 }
 
-.biography::before {
+.grandson-tribute::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: url('b.jpg') center/cover no-repeat fixed;
-    opacity: 0.04;
-    z-index: 0;
+    height: 8px;
+    background: linear-gradient(to right, #E5B299, #FCDEC0, #E5B299);
 }
 
-.biography-container {
+.grandson-tribute .tribute-header {
+    background: linear-gradient(to right, #7D5A50, #4A3933);
+    padding: 30px;
     position: relative;
-    z-index: 1;
-    background-color: var(--program-bg);
-    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-
-.biography-header {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 40px;
-    background: linear-gradient(to right, rgba(252, 222, 192, 0.2), rgba(252, 222, 192, 0.1));
-    border-bottom: 1px solid rgba(229, 178, 153, 0.3);
-}
-
-.biography-image {
-    flex: 0 0 200px;
-    margin-right: 40px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    border: 5px solid white;
-}
-
-.biography-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: all 0.5s ease;
-}
-
-.biography-image:hover img {
-    transform: scale(1.05);
-}
-
-.biography-intro {
-    flex: 1;
-    min-width: 200px;
-}
-
-.biography-intro h3 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-    font-family: 'Playfair Display', serif;
-}
-
-.birth-dates {
-    font-family: 'Lora', serif;
-    color: var(--text-color);
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-}
-
-.aka {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    color: var(--accent-color);
-    font-size: 1.1rem;
-}
-
-.biography-content {
-    padding: 40px;
-}
-
-.biography-content p {
-    font-family: 'Lora', serif;
-    font-size: 1.05rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: var(--text-color);
-}
-
-.biography-milestone {
-    margin: 30px 0 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(229, 178, 153, 0.3);
-}
-
-.biography-milestone h4 {
-    color: var(--primary-color);
-    font-size: 1.4rem;
-    font-family: 'Playfair Display', serif;
-    position: relative;
-    padding-left: 20px;
-}
-
-.biography-milestone h4::before {
-    content: '❖';
-    position: absolute;
-    left: 0;
-    color: var(--gold);
-    font-size: 0.9rem;
-}
-
-.biography-farewell {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: rgba(252, 222, 192, 0.15);
-    border-radius: 10px;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
     text-align: center;
 }
 
-.biography-farewell p {
+.tribute-header-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle, rgba(255,255,255,0.1) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.1) 2px, transparent 2px);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+    opacity: 0.3;
+}
+
+.grandson-tribute .tribute-header h3 {
+    position: relative;
+    z-index: 2;
+    font-size: 2rem;
+    color: var(--light-text);
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+
+.grandson-hearts {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+}
+
+.grandson-hearts i {
+    color: #E5B299;
+    font-size: 1.2rem;
+}
+
+.grandson-hearts i:nth-child(2) {
+    color: #FCDEC0;
+    font-size: 1.5rem;
+}
+
+.grandson-hearts i:nth-child(3) {
+    color: #E5B299;
+    font-size: 1.2rem;
+}
+
+.grandson-tribute .tribute-content {
+    padding: 40px;
+    position: relative;
+}
+
+.grandson-letter {
+    position: relative;
+    background-color: rgba(252, 222, 192, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    font-family: 'Lora', serif;
+}
+
+.letter-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.grandson-letter p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    color: var(--text-color);
+}
+
+.memory-box {
+    background-color: rgba(252, 222, 192, 0.15);
+    padding: 25px 25px 25px 60px;
+    margin: 30px 0;
+    border-radius: 8px;
+    position: relative;
+}
+
+.memory-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: rgba(229, 178, 153, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+.gas-station-memory {
+    background-color: rgba(212, 175, 55, 0.08);
+    padding: 25px;
+    position: relative;
+    border-left: 3px solid var(--gold);
+}
+
+.memory-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.scripture-box {
+    background-color: rgba(125, 90, 80, 0.05);
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 8px;
+    display: flex;
+    gap: 20px;
+}
+
+.scripture-icon {
+    flex: 0 0 40px;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.scripture-content {
+    flex: 1;
+}
+
+.scripture-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--primary-color);
     margin-bottom: 10px;
     font-size: 1.1rem;
 }
 
-.biography-farewell p:last-child {
-    margin-bottom: 0;
-    font-weight: 600;
+.farewell {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    text-align: center;
+    margin: 30px 0;
 }
 
-@media (max-width: 992px) {
-    .biography-header {
-        padding: 30px;
-    }
-    
-    .biography-image {
-        flex: 0 0 150px;
-        margin-right: 30px;
-    }
-    
-    .biography-intro h3 {
-        font-size: 1.8rem;
-    }
-    
-    .biography-content {
-        padding: 30px;
-    }
+.fly-high {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.fly-high p {
+    margin-bottom: 5px;
+}
+
+.fly-high-icon {
+    margin-top: 15px;
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    opacity: 0.8;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.grandson-tribute .tribute-signature {
+    margin-top: 30px;
+    text-align: right;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    padding-top: 15px;
+    border-top: 1px dashed rgba(229, 178, 153, 0.3);
 }
 
 @media (max-width: 768px) {
-    .biography-header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .grandson-tribute .tribute-header h3 {
+        font-size: 1.8rem;
     }
     
-    .biography-image {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-    
-    .biography-milestone h4 {
-        padding-left: 25px;
-    }
-    
-    .biography-content {
+    .grandson-letter {
         padding: 25px 20px;
+    }
+    
+    .memory-box {
+        padding: 20px 20px 20px 50px;
+    }
+    
+    .scripture-box {
+        padding: 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .scripture-icon {
+        justify-content: flex-start;
+    }
+    
+    .fly-high {
+        font-size: 1.2rem;
     }
 }
 
 @media (max-width: 480px) {
-    .biography-header {
-        padding: 20px;
+    .grandson-tribute .tribute-header h3 {
+        font-size: 1.5rem;
     }
     
-    .biography-intro h3 {
-        font-size: 1.6rem;
-    }
-    
-    .birth-dates, .aka {
+    .grandson-hearts i {
         font-size: 1rem;
     }
     
-    .biography-milestone h4 {
+    .grandson-hearts i:nth-child(2) {
+        font-size: 1.2rem;
+    }
+    
+    .grandson-tribute .tribute-content {
+        padding: 30px 20px;
+    }
+    
+    .letter-heading {
         font-size: 1.3rem;
     }
-}s
+    
+    .memory-box {
+        padding: 20px 15px 20px 45px;
+    }
+    
+    .memory-icon {
+        width: 25px;
+        height: 25px;
+        left: 10px;
+    }
+    
+    .memory-title, .farewell {
+        font-size: 1.1rem;
+    }
+    
+    .fly-high {
+        font-size: 1.1rem;
+    }
+}
 
     </style>
 </head>
@@ -1967,7 +2472,7 @@
             <span class="ornament">❧</span>
             
 
-        <!-- Daughter's Tribute Section - Add this inside your tributes section after the existing tribute -->
+        <!-- Daughter's Tribute Section -->
         <div class="tribute-card daughter-tribute" data-aos="fade-up">
             <div class="tribute-header">
                 <span class="tribute-icon"><i class="fas fa-heart"></i></span>
@@ -2023,6 +2528,153 @@
                 </div>
             </div>
         </div>
+
+        <!-- Son-in-Law Tribute -->
+            <div class="tribute-card son-in-law-tribute" data-aos="fade-up">
+                <div class="tribute-header">
+                    <div class="tribute-header-overlay"></div>
+                    <span class="tribute-icon"><i class="fas fa-user-tie"></i></span>
+                    <h3>TRIBUTE BY SON-IN-LAW</h3>
+                    <span class="quote-icon"><i class="fas fa-quote-right"></i></span>
+                </div>
+                <div class="tribute-content">
+                    <div class="son-in-law-intro">
+                        <p><span class="first-letter">M</span>ama Lucy, as you are affectionately called; I encountered you about 20 years ago when I presented myself and asked to marry your daughter Hagar.</p>
+                    </div>
+                    
+                    <div class="tribute-paragraphs">
+                        <div class="read-more-content" id="tribute-son-in-law">
+                            <p>At the time you had just left London for Ghana so this meeting was not in person. However, I immediately sensed and experienced your dedication to family, pragmatism and the fact that you believed that if something has to be done, it must be done well.</p>
+                            
+                            <p>The subsequent meetings and 'interviews' and background checks with Pastor Gospel, in whose care you had left your daughter, made it clear to me that you wouldn't just accept and take anyone as a son-in-law just for the sake of it. When I finally met you in Accra some months after we got married, I had a confirmation of the thoughts I had about you, and you sealed it with a warm and a gentle welcome.</p>
+                            
+                            <div class="tribute-memory">
+                                <div class="memory-icon"><i class="fas fa-heart"></i></div>
+                                <p>You talked with me as a son, explaining and showing me how to navigate through marriage life. You made me feel at ease and comfortable. At this time my anx and nerves of meeting my mother-in-law the first time fell off. You made me feel like I were your own son and I felt comfortable with you as I would my own mum. From here on our relationship would be better described as mother and son.</p>
+                            </div>
+                            
+                            <p>This encounter with you gave me a practical understanding when my mum, siblings, uncles and other family members tell me that you are a warm-hearted person who treats them exceptionally well and make them feel special anytime they meet with you. Mama Lucy, you cared not only for me but also everyone I cared about.</p>
+                            
+                            <p>When I visited your home in Sunyani, to my surprise, I saw a portrait of myself in your living room. I stood in a careful silent gaze of my portrait to make sure it was really me.</p>
+                            
+                            <p>And you placed it amongst the portraits of people who are dear to your heart. I did make a gracious comment on seeing my portrait but what I did not reveal was how chaffed I was, and how surprised I was with the confidence you had in seeing my photo perhaps several times every day in your home. I thought to myself this lady might have seen something in me that I have probably not seen.</p>
+                            
+                            <div class="tribute-memory">
+                                <div class="memory-icon"><i class="fas fa-home"></i></div>
+                                <p>During our recent visit to Ghana, you left your busy schedule to meet us in Accra, spent some days with us, before accompanying us to Kumasi and then welcoming us to your home in Sunyani. You gave me your own private car to move around with. You introduced me to any family and friends you could find. You practically showed me everywhere I know in Sunyani.</p>
+                            </div>
+                            
+                            <p>One of the many memories of you that has stuck with me is when I got sick in Ghana and couldn't eat, You prepared for me your special potent pepper soup that took away my flu and restored my appetite. And I'm glad to say that since then I haven't had any of such symptoms again.</p>
+                            
+                            <p>Your heart was so big, it had a place for all. I remember when we organised a birthday party for Josh, Priscilla and Linda. After the food was set and everyone was getting ready to enjoy, you took your car and excused everyone saying you'll be back soon. You did come back soon, but you didn't come alone. You brought with you many children, from where, nobody knew, to come to join in and enjoy the party. Everyone asked you where you had brought the children from. These children were not part of your own family but you graciously thought about them to bring some happiness to their lives. You showed us what a generous person you were. Whilst all of us were thinking about ourselves, focusing on how we were going to enjoy ourselves, you were thinking of other children you felt needed some much love and delicious food.</p>
+                            
+                            <div class="tribute-highlight">
+                                <p>You were really a mother to many and a mother to all.</p>
+                            </div>
+                            
+                            <p>You truly loved God and served Him well with all dedication and diligence. This translated to the love you had for all manner of people. You inspired me and my family by your constant prayers, pieces of advice and lessons from your own life and experiences. Anytime we spoke with you, you would ask Michelle and Josh about their progress in school and encouraged them to work harder and smarter to become the great people God has made them to be. You would say this would make you proud.</p>
+                            
+                            <p>Your attitude to hard work, business and excellence was a quality we will continue to cherish.</p>
+                            
+                            <div class="tribute-memory">
+                                <div class="memory-icon"><i class="fas fa-child"></i></div>
+                                <p>In our short stay with you, you had unconsciously inspired Josh with your passion, enthusiasm and instruction in business that he was very happy to stay behind in Ghana to continue to do business with you. Even at the airport, on our return, he pleaded with us to allow him to go back and help you with your businesses.</p>
+                            </div>
+                            
+                            <p>And when we returned to England, he will occasionally call you to ask how the business is going. You would take your time to teach and explain to him what has been going on in the business during the past few weeks.</p>
+                            
+                            <p>Mama Lucy, you have left a lasting legacy. Not just in the physical but also the intangibles, in your children, family, the church and in all you encountered. This means that even though you are no more here with us. You still live on through the impact you have had in the lives of many people you influenced.</p>
+                            
+                            <p>Mama Lucy, you have lived a good and a fulfilling life. All of us would have loved for you to live much longer on earth than you did. But we acknowledge the sovereignty of God and the fact that He has much better plans for you and for us so we won't argue with Him on this.</p>
+                            
+                            <div class="tribute-highlight final-message">
+                                <p>You loved and treated me like a son. I love and regard you as my mum. You will forever remain in my heart.</p>
+                            </div>
+                            
+                            <p>We have lost you, and it saddens our hearts. But heaven has gained you. It is also your gain because you are in a far better place. For this we are glad, and we hope in the promise of our Lord Jesus Christ who says we, who believe in Him and have trusted Him for eternal life will live, even though we die. This great promise is true for you, for us and all those who will believe and trust Jesus for their eternal salvation.</p>
+                            
+                            <p>Maa Lucy, you have gone ahead of us. Rest well with the Lord till we meet again.</p>
+                        </div>
+                        
+                        <span class="read-more-toggle" data-target="tribute-son-in-law">
+                            Read Full Tribute <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    
+                    <div class="tribute-signature">
+                        <p>With eternal gratitude and love,<br>Michael</p>
+                        <div class="signature-icon">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grandson's Tribute - Add this inside your tributes section after the existing tributes -->
+<div class="tribute-card grandson-tribute" data-aos="fade-up">
+    <div class="tribute-header">
+        <div class="tribute-header-pattern"></div>
+        <h3>TRIBUTE BY GRANDSON</h3>
+        <div class="grandson-hearts">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+    </div>
+    <div class="tribute-content">
+        <div class="grandson-letter">
+            <div class="letter-heading">Dear Grandma,</div>
+            
+            <div class="read-more-content" id="tribute-grandson">
+                <p>It's hard for us to believe that you're really gone. You were a kind and selfless person and you inspired us both. This has been a massive loss for us.</p>
+                
+                <p>Even though we saw you in person a few times, your impact was evident everywhere in our family. I saw you in the life of my mum, in how she spoke about you and how she lived. And when we did see you, your infectious energy shone brightly.</p>
+                
+                <div class="memory-box">
+                    <div class="memory-icon"><i class="fas fa-home"></i></div>
+                    <p>Staying at your house when we visited Ghana was such a fun experience. You were the glue that held everything together, and it was clear how much everyone loved you.</p>
+                </div>
+                
+                <p>I remember how mum would always show us the photos of you dancing in church on Facebook, saying 'look at your grandma', and it breaks my heart that I'll never see you dance ever again. I will miss you so so much and I hope to make you proud.</p>
+                
+                <div class="memory-box gas-station-memory">
+                    <div class="memory-title">My Favorite Memory</div>
+                    <p>There are a lot of memories that we had when we went to Ghana but my favourite memory about you was when you took me to the gas station for the first time. I loved it so much that when we left Ghana, I would call grandma every day and ask her how much we made at the gas station each day.</p>
+                </div>
+                
+                <p>I'll miss all of our calls on the phone, you always telling me to study hard and make you proud.</p>
+                
+                <div class="scripture-box">
+                    <div class="scripture-icon"><i class="fas fa-bible"></i></div>
+                    <div class="scripture-content">
+                        <div class="scripture-title">A reading from 1 Thessalonians:</div>
+                        <p>"Brothers and sisters, we do not want you to be uninformed about those who sleep in death, so that you do not grieve like the rest of mankind, who have no hope. For we believe that Jesus died and rose again, and so we believe that God will bring with Jesus those who have fallen asleep in him."</p>
+                    </div>
+                </div>
+                
+                <p>These verses tell us that although we have lost our beloved grandma, she is now in the hands of God and it is well with her soul. She is now resting free from all suffering and pain.</p>
+                
+                <p class="farewell">We will miss you Grandma and we will see you again the day the Lord has planned for us. But for now it's Goodbye. Rest in heavenly peace.</p>
+                
+                <div class="fly-high">
+                    <p>Fly high Grandma.</p>
+                    <p>Fly high.</p>
+                    <div class="fly-high-icon">
+                        <i class="fas fa-dove"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <span class="read-more-toggle" data-target="tribute-grandson">
+                Read Full Tribute <i class="fas fa-chevron-down"></i>
+            </span>
+        </div>
+        
+        <div class="tribute-signature">
+            <p>With love from your grandson, Josh</p>
+        </div>
+    </div>
+</div>
 
         
             <div class="tribute-card" data-aos="fade-up">
