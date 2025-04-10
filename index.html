@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>In Loving Memory - Rev. Mrs. Lucy Perbi-Nyarko</title>
+    <title>In Loving Memory - Rev. Mrs. Lucy Derbi-Nyarko</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
@@ -1202,7 +1202,7 @@
         }
         
         .read-more-content.expanded {
-            max-height: 1000px;
+            max-height: 5000px;
         }
         
         .read-more-content:not(.expanded)::after {
@@ -1434,13 +1434,209 @@
             margin-top: 30px;
             color: var(--primary-color);
         }
+
+        /* Biography Section Styling */
+.biography {
+    background-color: var(--light-text);
+    padding: 100px 0;
+    position: relative;
+}
+
+.biography::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('b.jpg') center/cover no-repeat fixed;
+    opacity: 0.04;
+    z-index: 0;
+}
+
+.biography-container {
+    position: relative;
+    z-index: 1;
+    background-color: var(--program-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.biography-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 40px;
+    background: linear-gradient(to right, rgba(252, 222, 192, 0.2), rgba(252, 222, 192, 0.1));
+    border-bottom: 1px solid rgba(229, 178, 153, 0.3);
+}
+
+.biography-image {
+    flex: 0 0 200px;
+    margin-right: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 5px solid white;
+}
+
+.biography-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.biography-image:hover img {
+    transform: scale(1.05);
+}
+
+.biography-intro {
+    flex: 1;
+    min-width: 200px;
+}
+
+.biography-intro h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.birth-dates {
+    font-family: 'Lora', serif;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.aka {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
+
+.biography-content {
+    padding: 40px;
+}
+
+.biography-content p {
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.biography-milestone {
+    margin: 30px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(229, 178, 153, 0.3);
+}
+
+.biography-milestone h4 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    padding-left: 20px;
+}
+
+.biography-milestone h4::before {
+    content: '❖';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-size: 0.9rem;
+}
+
+.biography-farewell {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(252, 222, 192, 0.15);
+    border-radius: 10px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    text-align: center;
+}
+
+.biography-farewell p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.biography-farewell p:last-child {
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+@media (max-width: 992px) {
+    .biography-header {
+        padding: 30px;
+    }
+    
+    .biography-image {
+        flex: 0 0 150px;
+        margin-right: 30px;
+    }
+    
+    .biography-intro h3 {
+        font-size: 1.8rem;
+    }
+    
+    .biography-content {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .biography-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .biography-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .biography-milestone h4 {
+        padding-left: 25px;
+    }
+    
+    .biography-content {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .biography-header {
+        padding: 20px;
+    }
+    
+    .biography-intro h3 {
+        font-size: 1.6rem;
+    }
+    
+    .birth-dates, .aka {
+        font-size: 1rem;
+    }
+    
+    .biography-milestone h4 {
+        font-size: 1.3rem;
+    }
+}s
+
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top nav" id="navbar">
         <div class="container">
-            <a class="navbar-brand" href="#home">Rev. Mrs. Lucy Perbi-Nyarko</a>
+            <a class="navbar-brand" href="#home">Rev. Mrs. Lucy Derbi-Nyarko</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -1475,7 +1671,7 @@
     <!-- Hero Section -->
     <header id="home">
         <div class="hero-text animate__animated animate__fadeIn">
-            <h1>Rev. Mrs. Lucy Perbi-Nyarko</h1>
+            <h1>Rev. Mrs. Lucy Derbi-Nyarko</h1>
             <p>In Loving Memory</p>
             <div class="dates">A Faithful Servant of God</div>
             <a href="#program" class="btn">View Memorial Service</a>
@@ -1675,30 +1871,94 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Biography Section -->
+    <section id="about" class="biography">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">About Rev. Mrs. Lucy Perbi-Nyarko</h2>
+            <h2 class="section-title" data-aos="fade-up">Biography</h2>
             <span class="ornament">❧</span>
-            <div class="about-content">
-                <div class="about-image" data-aos="fade-right">
-                    <img src="a.jpg" alt="Rev. Mrs. Lucy Perbi-Nyarko portrait">
-                </div>
-                <div class="about-text" data-aos="fade-left">
-                    <h3>A Life of Faith and Service</h3>
-                    <div class="read-more-content" id="about-bio">
-                        <p>Rev. Mrs. Lucy Perbi-Nyarko was a dedicated servant of God who touched countless lives through her ministry and compassionate spirit. Her journey of faith led her to serve in various capacities within the church and community.</p>
-                        <p>Known for her vibrant personality and love for traditional African culture, Rev. Mrs. Perbi-Nyarko was always adorned in colorful clothing that reflected her heritage and joyful spirit. Her ministry was characterized by passionate worship and powerful teaching of God's word.</p>
-                        <p>Throughout her life, she remained committed to uplifting others, particularly encouraging women in ministry. Her legacy continues through the many lives she touched and the spiritual children she mentored.</p>
-                        <p>Though she has gone to be with the Lord, her impact remains, and her memory lives on in our hearts. We celebrate a life well-lived in service to God and humanity.</p>
+            
+            <div class="biography-container" data-aos="fade-up">
+                <div class="biography-header">
+                    <div class="biography-image">
+                        <img src="a.jpg" alt="Rev. Mrs. Lucy Derbi-Nyarko portrait">
                     </div>
-                    <span class="read-more-toggle" data-target="about-bio">
-                        Read More <i class="fas fa-chevron-down"></i>
+                    <div class="biography-intro">
+                        <h3>Rev. Mrs. Lucy Perbi Nyarko</h3>
+                        <p class="birth-dates">21st November, 1958 - 2025</p>
+                        <p class="aka">Also Known As: Lucy Osei Afari</p>
+                    </div>
+                </div>
+                
+                <div class="biography-content">
+                    <div class="read-more-content" id="biography-text">
+                        <p>The late Rev. Mrs. Lucy Perbi Nyarko was born on 21st November, 1958 to the late Opanin Kwaku Nyamekye from the Nsoatre Nsesreso family and the late Obaapanin Grace Osei Afari from the Sunyani Gyeduakro family. She started her elementary school at the Nyamaa Basic School in 1964 but completed at the Sunyani Anglican school in 1974. When she was in middle form 3, she passed the Common Entrance examination to go to Ghana Secondary School in Koforidua but her late grandfather Opanin Adolphus Osei Afari who took care of her education declined to send her there due to her petite structure. Unperturbed by that decision, she again sat for the examination when she got to middle form four (F4) and passed to go to Sunyani Secondary School with the ambition to become a medical doctor.</p>
+                        
+                        <p>Unfortunate for her, her grandfather who preferred Technical Education to the Grammar type, decided to send her to the Sunyani Technical Institute (Sunyani Technical University) to do Catering for two years and end up as a Matron. Again, due to her structure the then principal, Mr. F. A. Baiden advised the grandfather to let her do Business which was four years with the hope that her physical structure would improve after the four years.</p>
+                        
+                        <div class="biography-milestone">
+                            <h4>Education Journey</h4>
+                        </div>
+                        
+                        <p>From the Sunyani Technical Institute, she proceeded to Takoradi Polytechnic in 1978 with her two certificate which were obtained concurrently i.e. Royal Society of Arts (RSA) and General Certificate of Education (G. C. E 'O' level) to do her Diploma in Business Studies (DBS) Accounting option and completed in 1981.</p>
+                        
+                        <p>Aided by Mr. Philip Awuah who bought forms and also vacated his room for her at campus, she was encouraged to attend the University of Cape Coast in 1982, to pursue the Bachelor of Commerce (B. Com), Accounting option and graduated with B.Com Hons. Degree and Diploma in Education simultaneously in 1987, due to the one-year University closure by the P. N. D. C Administration.</p>
+                        
+                        <p>After school, she was posted to her Alma Mata, Sunyani Technical Institute to do her National Service, where she taught accounting. Imbued with the Spirit of sacrifice, she at that time, organized special 'A' level Accounting Classes at the Twene Amanfo Secondary School for some students, some of which have graduated in B.Com and are in Administrative positions not forgetting the numerous female students who have completed their Masters, Degrees and Nursing programmes. To her "I cannot do Spirit" was an affront to her dignity and alien to her upbringing.</p>
+                        
+                        <div class="biography-milestone">
+                            <h4>Professional Career</h4>
+                        </div>
+                        
+                        <p>After completing her National Service Programme she was employed at the Ghana Water Company in 1989 as Officer. Impressed by her prowess in accounting she was tasked to assist the audit unit in the Commercial company. In order to keep her and make her feel comfortable, an estate house was bought for her to stay in.</p>
+                        
+                        <p>In 1995, the Volta River Authority (VRA) needed some Finance Officers and so she applied, attended interview and was employed and sent to the Tamale Area office to work as Area Finance officer. She was transferred back to Sunyani as Area Finance Officer and back to Tamale head office and back again to Sunyani still as Area Finance officer. Here in Sunyani, she got the opportunity to act as Area Manager. She later attended an interview for managerial position and she was subsequently promoted to the position of Area Manager breaking the long standing monopolized administrative structure. To be precise, she was the first female to rise to that position. Again, she was the first person from non-engineering background to get to that position thanks to her hard work, tactfulness, dexterity and acumen.</p>
+                        
+                        <div class="biography-milestone">
+                            <h4>Further Education & Community Impact</h4>
+                        </div>
+                        
+                        <p>While in active service, she got the opportunity in 2003 to travel to the United Kingdom to study at Leicester University where she obtained her Master's Degree in Business Administration (Finance option). She formed the VRA Ladies Association and encouraged many cashiers to further their studies some of whom have become finance officers. She organized field trips and excursions for the ladies taking them to places like Burkina Faso and Dubai. Through her instrumentality, some females from poor houses were identified and adopted by the Ladies Association and their educational expenses were catered for by the association.</p>
+                        
+                        <p>From Sunyani, she was transferred to Bolgatanga as Area Manager. Her impact over there, mesmerized the workers and the community to the extent that the Bongo Chief enskinned her as Development Queen of Bongo and given the title Timnalana. She was so dear to them that when she retired in 2018, a convoy was sent to bring her back to Bolgatanga to continue her good works there not to mention the educational opportunities initiated for the youth and the donation of items to the needy and elderly.</p>
+                        
+                        <div class="biography-milestone">
+                            <h4>Family Life</h4>
+                        </div>
+                        
+                        <p>To the family, Rev. Mrs. Lucy Perbi Nyarko was a pivot around which the care and support of her siblings revolved. She was an oasis of strength, direction and financial support a vacuum which will be difficult to fill. She was respectful, co-operative, task oriented, serviceable, frank and out-spoken.</p>
+                        
+                        <p>Back in September 1985, Rev. Mrs. Lucy Perbi Nyarko married to Mr. Crosby Perbi Nyarko. They had plans to celebrate their fortieth (40) year marriage vows this year only to be taken aback by the unexpected news from Accra where she received medical care.</p>
+                        
+                        <div class="biography-milestone">
+                            <h4>Christian Life & Ministry</h4>
+                        </div>
+                        
+                        <p>Madam Lucy's Christian life has been quite chequered, starting at the Methodist Church in her childhood days to the Assemblies of God Church (AG), Calvary Charismatic Centre (C.C.C) and Elim City where she was one of the founding members, culminating in her being ordained as a minister of the gospel in 2016.</p>
+                        
+                        <p>At Elim City, she was a board member, was in charge of church finances, Bible School Teacher (Life in the word), Marriage Counsellor (Family life), women ministry organizer and Pastor in charge of the Twi section (Aseda Congregation).</p>
+                        
+                        <div class="biography-milestone">
+                            <h4>Post-Retirement Activities</h4>
+                        </div>
+                        
+                        <p>After retirement from active service, Rev. Mrs. Lucy Perbi Nyarko continued to offer her skills in support of humanity. She was an executive members of Sunyani Technical Institute Alumni, Regional Executive member of Ghana LPG Operators Association (GLIPGOA) and the National Treasurer. She was also the treasurer of the VRA Retirees Association.</p>
+                        
+                        <div class="biography-farewell">
+                            <p>The entire family, numerous people you have been supporting and those still under the care of the Perbi Nyarko family will forever miss you.</p>
+                            <p>Rest well in the bosom of Abraham. Shalom.</p>
+                            <p>Damire fa due</p>
+                            <p>Due ne Amanehunu. NANTE YIE OOO!</p>
+                        </div>
+                    </div>
+                    
+                    <span class="read-more-toggle" data-target="biography-text">
+                        Read Full Biography <i class="fas fa-chevron-down"></i>
                     </span>
                 </div>
             </div>
         </div>
     </section>
+    
     
     <!-- Tributes Section -->
     <section id="tributes" class="tributes">
@@ -1706,6 +1966,65 @@
             <h2 class="section-title" data-aos="fade-up">Tributes</h2>
             <span class="ornament">❧</span>
             
+
+        <!-- Daughter's Tribute Section - Add this inside your tributes section after the existing tribute -->
+        <div class="tribute-card daughter-tribute" data-aos="fade-up">
+            <div class="tribute-header">
+                <span class="tribute-icon"><i class="fas fa-heart"></i></span>
+                <h3>TRIBUTE BY DAUGHTER</h3>
+                <span class="quote-icon"><i class="fas fa-quote-left"></i></span>
+            </div>
+            <div class="tribute-content">
+                <div class="featured-quote">
+                    <p>"Those who live in the shelter of the Most High will find rest in the shadow of the Almighty." <span class="quote-source">— Psalm 91:1 (NLT)</span></p>
+                </div>
+                
+                <p class="tribute-intro">I want to thank you all for coming to celebrate the life of my mum with us today.</p>
+                
+                <div class="tribute-paragraphs">
+                    <div class="read-more-content" id="tribute-daughter">
+                        <p>Maa, this was your favourite bible verse. You loved the Lord and loved spending time in his presence. Never did you miss a church gathering or anything related to God's work. You raised us on God's word. Each morning at 5:30am without fail, you will come knocking on our doors for morning devotion. You shared testimonies about the countless times in your life the Lord brought angels your way to assist you so you never took God or His things for granted. You influenced us with the desire to pursue a godly life and encouraged us to trust the Lord always.</p>
+                        
+                        <div class="tribute-highlight">
+                            <p>You were a fierce guardian and a gentle guide who always steered us towards growth and improvement.</p>
+                        </div>
+                        
+                        <p>You had a strong belief in our potential and always encouraged us to strive for excellence. You instilled in us a drive to be the best version of ourselves. I remember when I was about to write my BECE, you noticed that I wasn't studying as I should. You sat me down and asked me about my ambitions for life. We had a long chat and you advise me that without studying, I wouldn't be able to achieve those ambitions. That was the turning point for me.</p>
+                        
+                        <p>You always gave us the confidence that we could achieve anything we set our minds to do. You encouraged us to take every opportunity that came our way and make great things out of them. I wouldn't be where I am now if it wasn't for your consistent love and support. You were my biggest cheerleader.</p>
+                        
+                        <p>When I was finishing uni, I discussed with you about my desire to join you in the UK. You did everything possible to make it happen. As soon as I arrived, you got me involved in serving in the church. You recruited me into the accounts team so I can replace you when you leave for Ghana. When it was time to leave after your studies, you cared so much about my wellbeing in a foreign land that you told so many people to look after me.</p>
+                        
+                        <div class="tribute-highlight">
+                            <p>Your love for children was a testament to your endless compassion and desire to nurture and care for them.</p>
+                        </div>
+                        
+                        <p>You extended your love far beyond our small family. Your heart was so vast and so generous, that you never turned any child away. Your home was a haven to many. It was constantly filled with the laughter and chatter of children. Every child who crossed your path felt this warmth and longed to be around you. You gave birth to a few, but you nurtured a multitude and became a mother figure to so many.</p>
+                        
+                        <p>When we visited Ghana in August 2023, it made no sense to me why we all cried when it was time to say goodbye but It does now - It was the last time we were going to see and hug you. If l knew that was the last time, I would have hugged you even more tightly.</p>
+                        
+                        <p>Maa, you've left us too soon. Our hearts desire was for you to live a long life. As I look back at your accomplishments and the lives you have impacted, I can say that you lived your life to the full. I used to say to you that if I am able to achieve even a quarter of your life achievement's, I would consider myself successful. Maa, you have finished the race that was set for you by your maker. It's now time for you to rest beautifully in the shadows of the Almighty. We will strive to make you proud by continuing to build on the foundation you have laid so beautifully.</p>
+                        
+                        <div class="tribute-highlight final-highlight">
+                            <p>You may be gone, Maa but your spirit will forever light our paths and that of all those you empowered.</p>
+                        </div>
+                        
+                        <p>Many children will sing your praises for generations to come. I will miss our long chats especially the ones about your childhood struggles and how you rose above them all. I love you, Maa-more than words can say. You will be deeply missed, but never forgotten. May your beautiful soul rest in perfect peace till we meet again.</p>
+                    </div>
+                    
+                    <span class="read-more-toggle" data-target="tribute-daughter">
+                        Read Full Tribute <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                
+                <div class="tribute-signature">
+                    <p>With eternal love,<br>Hagar</p>
+                    <div class="signature-decoration">❦</div>
+                </div>
+            </div>
+        </div>
+
+        
             <div class="tribute-card" data-aos="fade-up">
                 <div class="tribute-header">
                     <h3>TRIBUTE BY PS. BENE ON BEHALF OF ELIM CITY</h3>
@@ -1772,7 +2091,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <h3>In Loving Memory of Rev. Mrs. Lucy Perbi-Nyarko</h3>
+            <h3>In Loving Memory of Rev. Mrs. Lucy Derbi-Nyarko</h3>
             <p>A Faithful Servant of God</p>
             <div class="social-icons">
                 <a href="#"><i class="fab fa-facebook"></i></a>
@@ -1781,7 +2100,7 @@
                 <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
             <div class="copyright">
-                &copy; 2025 - In Memory of Rev. Mrs. Lucy Perbi-Nyarko
+                &copy; 2025 - In Memory of Rev. Mrs. Lucy Derbi-Nyarko
             </div>
         </div>
     </footer>
@@ -1912,7 +2231,7 @@
                 const letter = alphabet.charAt(i);
                 images.push({
                     src: `${letter}.jpg`,
-                    alt: `Rev. Mrs. Lucy Perbi-Nyarko memorial image ${i+1}`
+                    alt: `Rev. Mrs. Lucy Derbi-Nyarko memorial image ${i+1}`
                 });
             }
             
