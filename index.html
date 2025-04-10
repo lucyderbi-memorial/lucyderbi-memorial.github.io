@@ -1845,296 +1845,642 @@
         }
 
         /* Grandson's Tribute Styling */
-.grandson-tribute {
+        .grandson-tribute {
+            margin-top: 60px;
+            background-color: var(--program-bg);
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .grandson-tribute::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(to right, #E5B299, #FCDEC0, #E5B299);
+        }
+
+        .grandson-tribute .tribute-header {
+            background: linear-gradient(to right, #7D5A50, #4A3933);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .tribute-header-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle, rgba(255,255,255,0.1) 2px, transparent 2px),
+                radial-gradient(circle, rgba(255,255,255,0.1) 2px, transparent 2px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            opacity: 0.3;
+        }
+
+        .grandson-tribute .tribute-header h3 {
+            position: relative;
+            z-index: 2;
+            font-size: 2rem;
+            color: var(--light-text);
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+        }
+
+        .grandson-hearts {
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 3;
+        }
+
+        .grandson-hearts i {
+            color: #E5B299;
+            font-size: 1.2rem;
+        }
+
+        .grandson-hearts i:nth-child(2) {
+            color: #FCDEC0;
+            font-size: 1.5rem;
+        }
+
+        .grandson-hearts i:nth-child(3) {
+            color: #E5B299;
+            font-size: 1.2rem;
+        }
+
+        .grandson-tribute .tribute-content {
+            padding: 40px;
+            position: relative;
+        }
+
+        .grandson-letter {
+            position: relative;
+            background-color: rgba(252, 222, 192, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+            font-family: 'Lora', serif;
+        }
+
+        .letter-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .grandson-letter p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-color);
+        }
+
+        .memory-box {
+            background-color: rgba(252, 222, 192, 0.15);
+            padding: 25px 25px 25px 60px;
+            margin: 30px 0;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .memory-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            background-color: rgba(229, 178, 153, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+        }
+
+        .gas-station-memory {
+            background-color: rgba(212, 175, 55, 0.08);
+            padding: 25px;
+            position: relative;
+            border-left: 3px solid var(--gold);
+        }
+
+        .memory-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .scripture-box {
+            background-color: rgba(125, 90, 80, 0.05);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .scripture-icon {
+            flex: 0 0 40px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 5px;
+        }
+
+        .scripture-content {
+            flex: 1;
+        }
+
+        .scripture-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .farewell {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .fly-high {
+            text-align: center;
+            margin: 40px 0 20px;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+        }
+
+        .fly-high p {
+            margin-bottom: 5px;
+        }
+
+        .fly-high-icon {
+            margin-top: 15px;
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            opacity: 0.8;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .grandson-tribute .tribute-signature {
+            margin-top: 30px;
+            text-align: right;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            padding-top: 15px;
+            border-top: 1px dashed rgba(229, 178, 153, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .grandson-tribute .tribute-header h3 {
+                font-size: 1.8rem;
+            }
+            
+            .grandson-letter {
+                padding: 25px 20px;
+            }
+            
+            .memory-box {
+                padding: 20px 20px 20px 50px;
+            }
+            
+            .scripture-box {
+                padding: 20px;
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .scripture-icon {
+                justify-content: flex-start;
+            }
+            
+            .fly-high {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grandson-tribute .tribute-header h3 {
+                font-size: 1.5rem;
+            }
+            
+            .grandson-hearts i {
+                font-size: 1rem;
+            }
+            
+            .grandson-hearts i:nth-child(2) {
+                font-size: 1.2rem;
+            }
+            
+            .grandson-tribute .tribute-content {
+                padding: 30px 20px;
+            }
+            
+            .letter-heading {
+                font-size: 1.3rem;
+            }
+            
+            .memory-box {
+                padding: 20px 15px 20px 45px;
+            }
+            
+            .memory-icon {
+                width: 25px;
+                height: 25px;
+                left: 10px;
+            }
+            
+            .memory-title, .farewell {
+                font-size: 1.1rem;
+            }
+            
+            .fly-high {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Childhood Friend & Colleague Tribute Styling */
+.friend-tribute {
     margin-top: 60px;
     background-color: var(--program-bg);
     border: none;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
     position: relative;
 }
 
-.grandson-tribute::before {
+.friend-tribute::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 8px;
-    background: linear-gradient(to right, #E5B299, #FCDEC0, #E5B299);
+    right: 0;
+    height: 6px;
+    background: linear-gradient(to right, #FFC107, #D4AF37, #FFC107);
 }
 
-.grandson-tribute .tribute-header {
-    background: linear-gradient(to right, #7D5A50, #4A3933);
-    padding: 30px;
+.friend-tribute .tribute-header {
+    background: linear-gradient(to right, #4A3933, #7D5A50);
+    padding: 35px;
     position: relative;
     overflow: hidden;
     text-align: center;
 }
 
-.tribute-header-pattern {
+.friend-tribute-pattern {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-image: 
-        radial-gradient(circle, rgba(255,255,255,0.1) 2px, transparent 2px),
-        radial-gradient(circle, rgba(255,255,255,0.1) 2px, transparent 2px);
-    background-size: 30px 30px;
-    background-position: 0 0, 15px 15px;
-    opacity: 0.3;
+        linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.05) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.05) 75%);
+    background-size: 20px 20px;
+    opacity: 0.5;
 }
 
-.grandson-tribute .tribute-header h3 {
+.friend-tribute .tribute-icon {
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: rgba(229, 178, 153, 0.7);
+    z-index: 5;
+}
+
+.friend-tribute .tribute-header h3 {
     position: relative;
     z-index: 2;
     font-size: 2rem;
     color: var(--light-text);
-    margin: 0;
+    margin: 0 0 10px 0;
     font-family: 'Playfair Display', serif;
     letter-spacing: 1px;
 }
 
-.grandson-hearts {
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    z-index: 3;
-}
-
-.grandson-hearts i {
-    color: #E5B299;
+.tribute-relationship {
+    position: relative;
+    z-index: 2;
+    color: var(--secondary-color);
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
     font-size: 1.2rem;
+    opacity: 0.9;
 }
 
-.grandson-hearts i:nth-child(2) {
-    color: #FCDEC0;
-    font-size: 1.5rem;
-}
-
-.grandson-hearts i:nth-child(3) {
-    color: #E5B299;
-    font-size: 1.2rem;
-}
-
-.grandson-tribute .tribute-content {
+.friend-tribute .tribute-content {
     padding: 40px;
     position: relative;
+    background: linear-gradient(to bottom, rgba(252, 222, 192, 0.08), rgba(255, 255, 255, 1));
 }
 
-.grandson-letter {
-    position: relative;
-    background-color: rgba(252, 222, 192, 0.05);
-    padding: 30px;
-    border-radius: 10px;
+.friend-tribute-intro {
     font-family: 'Lora', serif;
-}
-
-.letter-heading {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
+    font-size: 1.15rem;
     color: var(--primary-color);
-    margin-bottom: 20px;
-    font-weight: 600;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    padding-left: 20px;
+    border-left: 3px solid #D4AF37;
 }
 
-.grandson-letter p {
+.scripture-verse {
+    background-color: rgba(252, 222, 192, 0.15);
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.scripture-verse::before,
+.scripture-verse::after {
+    content: '"';
+    font-family: 'Georgia', serif;
+    font-size: 4rem;
+    color: rgba(212, 175, 55, 0.2);
+    position: absolute;
+    line-height: 0;
+}
+
+.scripture-verse::before {
+    top: 25px;
+    left: 10px;
+}
+
+.scripture-verse::after {
+    bottom: 5px;
+    right: 10px;
+    transform: rotate(180deg);
+}
+
+.verse-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    line-height: the: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+.verse-reference {
+    font-family: 'Lora', serif;
+    font-size: 0.95rem;
+    color: var(--accent-color);
+}
+
+.friend-tribute p {
     margin-bottom: 20px;
     line-height: 1.8;
     font-size: 1.05rem;
     color: var(--text-color);
+    font-family: 'Lora', serif;
 }
 
-.memory-box {
-    background-color: rgba(252, 222, 192, 0.15);
-    padding: 25px 25px 25px 60px;
-    margin: 30px 0;
-    border-radius: 8px;
+.tribute-memory-accent {
+    margin: 35px 0;
+    padding: 0 20px;
     position: relative;
 }
 
-.memory-icon {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-    background-color: rgba(229, 178, 153, 0.2);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary-color);
+.memory-line {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #D4AF37, transparent);
+    margin: 20px 0;
 }
 
-.gas-station-memory {
-    background-color: rgba(212, 175, 55, 0.08);
-    padding: 25px;
-    position: relative;
-    border-left: 3px solid var(--gold);
-}
-
-.memory-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-    font-weight: 600;
+.tribute-memory-accent p {
     text-align: center;
-}
-
-.scripture-box {
-    background-color: rgba(125, 90, 80, 0.05);
-    padding: 25px;
-    margin: 30px 0;
-    border-radius: 8px;
-    display: flex;
-    gap: 20px;
-}
-
-.scripture-icon {
-    flex: 0 0 40px;
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 5px;
-}
-
-.scripture-content {
-    flex: 1;
-}
-
-.scripture-title {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-}
-
-.farewell {
-    font-family: 'Playfair Display', serif;
     font-size: 1.15rem;
     color: var(--primary-color);
-    font-weight: 500;
-    text-align: center;
+}
+
+.tribute-qualities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
     margin: 30px 0;
 }
 
-.fly-high {
-    text-align: center;
-    margin: 40px 0 20px;
+.tribute-qualities span {
+    background-color: rgba(229, 178, 153, 0.1);
+    padding: 8px 15px;
+    border-radius: 30px;
     font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
     color: var(--primary-color);
-    font-size: 1.3rem;
+    font-size: 1rem;
+    border: 1px solid rgba(229, 178, 153, 0.3);
 }
 
-.fly-high p {
+.farewell-container {
+    margin: 40px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.farewell-ornament {
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.farewell-message {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    background-color: rgba(252, 222, 192, 0.15);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid rgba(229, 178, 153, 0.2);
+}
+
+.farewell-message p {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.farewell-message p:last-child {
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.tribute-signature {
+    margin-top: 40px;
+    text-align: right;
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.signature-line {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(229, 178, 153, 0.5));
+    margin-bottom: 20px;
+}
+
+.tribute-signature p {
     margin-bottom: 5px;
 }
 
-.fly-high-icon {
-    margin-top: 15px;
-    font-size: 1.8rem;
-    color: var(--accent-color);
-    opacity: 0.8;
-    animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-
-.grandson-tribute .tribute-signature {
-    margin-top: 30px;
-    text-align: right;
+.tribute-signature p:first-child {
     font-style: italic;
-    font-family: 'Playfair Display', serif;
-    color: var(--primary-color);
+    opacity: 0.8;
+    font-size: 0.95rem;
+}
+
+.signatory {
+    font-weight: 600;
     font-size: 1.1rem;
-    padding-top: 15px;
-    border-top: 1px dashed rgba(229, 178, 153, 0.3);
 }
 
 @media (max-width: 768px) {
-    .grandson-tribute .tribute-header h3 {
+    .friend-tribute .tribute-header h3 {
         font-size: 1.8rem;
     }
     
-    .grandson-letter {
-        padding: 25px 20px;
+    .tribute-relationship {
+        font-size: 1.1rem;
     }
     
-    .memory-box {
-        padding: 20px 20px 20px 50px;
+    .friend-tribute .tribute-content {
+        padding: 30px 25px;
     }
     
-    .scripture-box {
+    .friend-tribute-intro {
+        font-size: 1.1rem;
+    }
+    
+    .scripture-verse {
         padding: 20px;
-        flex-direction: column;
+    }
+    
+    .verse-quote {
+        font-size: 1.1rem;
+    }
+    
+    .tribute-memory-accent {
+        padding: 0 10px;
+    }
+    
+    .tribute-qualities {
         gap: 10px;
     }
     
-    .scripture-icon {
-        justify-content: flex-start;
+    .tribute-qualities span {
+        padding: 6px 12px;
+        font-size: 0.9rem;
     }
     
-    .fly-high {
-        font-size: 1.2rem;
+    .farewell-message {
+        padding: 20px;
     }
 }
 
 @media (max-width: 480px) {
-    .grandson-tribute .tribute-header h3 {
+    .friend-tribute .tribute-header h3 {
         font-size: 1.5rem;
     }
     
-    .grandson-hearts i {
+    .friend-tribute .tribute-icon {
+        display: none;
+    }
+    
+    .tribute-relationship {
         font-size: 1rem;
     }
     
-    .grandson-hearts i:nth-child(2) {
-        font-size: 1.2rem;
+    .friend-tribute .tribute-content {
+        padding: 25px 20px;
     }
     
-    .grandson-tribute .tribute-content {
-        padding: 30px 20px;
+    .friend-tribute-intro {
+        font-size: 1.05rem;
+        padding-left: 15px;
     }
     
-    .letter-heading {
-        font-size: 1.3rem;
+    .scripture-verse {
+        padding: 20px 15px;
     }
     
-    .memory-box {
-        padding: 20px 15px 20px 45px;
+    .verse-quote {
+        font-size: 1rem;
     }
     
-    .memory-icon {
-        width: 25px;
-        height: 25px;
-        left: 10px;
+    .scripture-verse::before,
+    .scripture-verse::after {
+        font-size: 3rem;
     }
     
-    .memory-title, .farewell {
-        font-size: 1.1rem;
+    .tribute-memory-accent p {
+        font-size: 1.05rem;
     }
     
-    .fly-high {
-        font-size: 1.1rem;
+    .tribute-qualities {
+        gap: 8px;
+    }
+    
+    .tribute-qualities span {
+        padding: 5px 10px;
+        font-size: 0.85rem;
+    }
+    
+    .farewell-message p {
+        font-size: 1rem;
     }
 }
-
     </style>
 </head>
 <body>
@@ -2611,70 +2957,70 @@
             </div>
 
             <!-- Grandson's Tribute - Add this inside your tributes section after the existing tributes -->
-<div class="tribute-card grandson-tribute" data-aos="fade-up">
-    <div class="tribute-header">
-        <div class="tribute-header-pattern"></div>
-        <h3>TRIBUTE BY GRANDCHILDREN</h3>
-        <div class="grandson-hearts">
-            <i class="fas fa-heart"></i>
-            <i class="fas fa-heart"></i>
-            <i class="fas fa-heart"></i>
-        </div>
-    </div>
-    <div class="tribute-content">
-        <div class="grandson-letter">
-            <div class="letter-heading">Dear Grandma,</div>
-            
-            <div class="read-more-content" id="tribute-grandson">
-                <p>It's hard for us to believe that you're really gone. You were a kind and selfless person and you inspired us both. This has been a massive loss for us.</p>
-                
-                <p>Even though we saw you in person a few times, your impact was evident everywhere in our family. I saw you in the life of my mum, in how she spoke about you and how she lived. And when we did see you, your infectious energy shone brightly.</p>
-                
-                <div class="memory-box">
-                    <div class="memory-icon"><i class="fas fa-home"></i></div>
-                    <p>Staying at your house when we visited Ghana was such a fun experience. You were the glue that held everything together, and it was clear how much everyone loved you.</p>
-                </div>
-                
-                <p>I remember how mum would always show us the photos of you dancing in church on Facebook, saying 'look at your grandma', and it breaks my heart that I'll never see you dance ever again. I will miss you so so much and I hope to make you proud.</p>
-                
-                <div class="memory-box gas-station-memory">
-                    <div class="memory-title">My Favorite Memory</div>
-                    <p>There are a lot of memories that we had when we went to Ghana but my favourite memory about you was when you took me to the gas station for the first time. I loved it so much that when we left Ghana, I would call grandma every day and ask her how much we made at the gas station each day.</p>
-                </div>
-                
-                <p>I'll miss all of our calls on the phone, you always telling me to study hard and make you proud.</p>
-                
-                <div class="scripture-box">
-                    <div class="scripture-icon"><i class="fas fa-bible"></i></div>
-                    <div class="scripture-content">
-                        <div class="scripture-title">A reading from 1 Thessalonians:</div>
-                        <p>"Brothers and sisters, we do not want you to be uninformed about those who sleep in death, so that you do not grieve like the rest of mankind, who have no hope. For we believe that Jesus died and rose again, and so we believe that God will bring with Jesus those who have fallen asleep in him."</p>
+            <div class="tribute-card grandson-tribute" data-aos="fade-up">
+                <div class="tribute-header">
+                    <div class="tribute-header-pattern"></div>
+                    <h3>TRIBUTE BY GRANDCHILDREN</h3>
+                    <div class="grandson-hearts">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-heart"></i>
                     </div>
                 </div>
-                
-                <p>These verses tell us that although we have lost our beloved grandma, she is now in the hands of God and it is well with her soul. She is now resting free from all suffering and pain.</p>
-                
-                <p class="farewell">We will miss you Grandma and we will see you again the day the Lord has planned for us. But for now it's Goodbye. Rest in heavenly peace.</p>
-                
-                <div class="fly-high">
-                    <p>Fly high Grandma.</p>
-                    <p>Fly high.</p>
-                    <div class="fly-high-icon">
-                        <i class="fas fa-dove"></i>
+                <div class="tribute-content">
+                    <div class="grandson-letter">
+                        <div class="letter-heading">Dear Grandma,</div>
+                        
+                        <div class="read-more-content" id="tribute-grandson">
+                            <p>It's hard for us to believe that you're really gone. You were a kind and selfless person and you inspired us both. This has been a massive loss for us.</p>
+                            
+                            <p>Even though we saw you in person a few times, your impact was evident everywhere in our family. I saw you in the life of my mum, in how she spoke about you and how she lived. And when we did see you, your infectious energy shone brightly.</p>
+                            
+                            <div class="memory-box">
+                                <div class="memory-icon"><i class="fas fa-home"></i></div>
+                                <p>Staying at your house when we visited Ghana was such a fun experience. You were the glue that held everything together, and it was clear how much everyone loved you.</p>
+                            </div>
+                            
+                            <p>I remember how mum would always show us the photos of you dancing in church on Facebook, saying 'look at your grandma', and it breaks my heart that I'll never see you dance ever again. I will miss you so so much and I hope to make you proud.</p>
+                            
+                            <div class="memory-box gas-station-memory">
+                                <div class="memory-title">My Favorite Memory</div>
+                                <p>There are a lot of memories that we had when we went to Ghana but my favourite memory about you was when you took me to the gas station for the first time. I loved it so much that when we left Ghana, I would call grandma every day and ask her how much we made at the gas station each day.</p>
+                            </div>
+                            
+                            <p>I'll miss all of our calls on the phone, you always telling me to study hard and make you proud.</p>
+                            
+                            <div class="scripture-box">
+                                <div class="scripture-icon"><i class="fas fa-bible"></i></div>
+                                <div class="scripture-content">
+                                    <div class="scripture-title">A reading from 1 Thessalonians:</div>
+                                    <p>"Brothers and sisters, we do not want you to be uninformed about those who sleep in death, so that you do not grieve like the rest of mankind, who have no hope. For we believe that Jesus died and rose again, and so we believe that God will bring with Jesus those who have fallen asleep in him."</p>
+                                </div>
+                            </div>
+                            
+                            <p>These verses tell us that although we have lost our beloved grandma, she is now in the hands of God and it is well with her soul. She is now resting free from all suffering and pain.</p>
+                            
+                            <p class="farewell">We will miss you Grandma and we will see you again the day the Lord has planned for us. But for now it's Goodbye. Rest in heavenly peace.</p>
+                            
+                            <div class="fly-high">
+                                <p>Fly high Grandma.</p>
+                                <p>Fly high.</p>
+                                <div class="fly-high-icon">
+                                    <i class="fas fa-dove"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <span class="read-more-toggle" data-target="tribute-grandson">
+                            Read Full Tribute <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    
+                    <div class="tribute-signature">
+                        <p>With love from your grandchilderen, Michelle & Josh</p>
                     </div>
                 </div>
             </div>
-            
-            <span class="read-more-toggle" data-target="tribute-grandson">
-                Read Full Tribute <i class="fas fa-chevron-down"></i>
-            </span>
-        </div>
-        
-        <div class="tribute-signature">
-            <p>With love from your grandchilderen, Michelle & Josh</p>
-        </div>
-    </div>
-</div>
 
         
             <div class="tribute-card" data-aos="fade-up">
@@ -2717,6 +3063,77 @@
                     <span class="read-more-toggle" data-target="tribute-elim">
                         Read Full Tribute <i class="fas fa-chevron-down"></i>
                     </span>
+                </div>
+            </div>
+
+            <!-- Childhood Friend & Colleague Tribute - Add this inside your tributes section after the existing tributes -->
+            <div class="tribute-card friend-tribute" data-aos="fade-up">
+                <div class="tribute-header">
+                    <div class="friend-tribute-pattern"></div>
+                    <span class="tribute-icon">
+                        <i class="fas fa-handshake"></i>
+                    </span>
+                    <h3>TRIBUTE BY CLEMENT DANSO TANDOH</h3>
+                    <p class="tribute-relationship">Childhood friend and work colleague</p>
+                </div>
+                
+                <div class="tribute-content">
+                    <div class="friend-tribute-intro">
+                        <p>It is with great sadness, yet incredible honour that I write this tribute for our sister, our colleague, our friend Rev Mrs Lucy Perbi-Nyarko.</p>
+                    </div>
+                    
+                    <div class="scripture-verse">
+                        <div class="verse-quote">"I am the resurrection and the life. He who believes in Me though he may die, he shall live. And whoever lives and believes in Me shall never die"</div>
+                        <div class="verse-reference">— John 11:25-26</div>
+                    </div>
+                    
+                    <div class="read-more-content" id="tribute-friend">
+                        <p>Our dear Pastor and Sister Lucy, we are thankful to God for your life. You were so loving, caring and true to be with. As we grew up through our youthful years, we remember the fun and laughter which will always remain in our hearts. The memories we created together will last forever.</p>
+                        
+                        <p>Today, family members, friends and loved ones have gathered to pay our last respect to a unique and virtuous lady Pastor Mrs Lucy Perbi Nyarko. Your tragic passing was a shock beyond imagination.</p>
+                        
+                        <div class="tribute-memory-accent">
+                            <div class="memory-line"></div>
+                            <p>Crosby, Eugene, Rhoda and I were at the hospital when the doctor informed us that you were nearing the end of life. In that moment, my world stood still.</p>
+                            <div class="memory-line"></div>
+                        </div>
+                        
+                        <p>Death has led us to ask the doctors "what is meant by nearing the end of life" what is life truly worth? Today we find it so hard to bid you farewell to a devoted mother, diligent sister, compassionate woman and a people's person. We ask ourselves, what does farewell mean if not death. But will death itself be farewell? How profound is that tragedy that has engulfed us?</p>
+                        
+                        <div class="tribute-qualities">
+                            <span>Loving</span>
+                            <span>Caring</span>
+                            <span>Devoted</span>
+                            <span>Diligent</span>
+                            <span>Compassionate</span>
+                            <span>Virtuous</span>
+                        </div>
+                        
+                        <p>Now, for the first time in our lives, we didn't have you, Rev Mrs Lucy to turn to. The pain we feel for you is deep.</p>
+                        
+                        <p>There is a void that we struggle to fill, emptiness in our family. We shall remain closer than close. May your soul rest in peace with your maker, you have done what you came to do here on earth. Your demise came suddenly but your maker understands.</p>
+                        
+                        <div class="farewell-container">
+                            <div class="farewell-ornament">❦</div>
+                            <div class="farewell-message">
+                                <p>We wish you safe journey into eternity.</p>
+                                <p>Fare thee well Afia Lucy.</p>
+                                <p>May your Ladyship soul rest in peace.</p>
+                                <p>Continue to smile with angels until the trumpet sounds and we meet again. Amen.</p>
+                            </div>
+                            <div class="farewell-ornament">❦</div>
+                        </div>
+                    </div>
+                    
+                    <span class="read-more-toggle" data-target="tribute-friend">
+                        Read Full Tribute <i class="fas fa-chevron-down"></i>
+                    </span>
+                    
+                    <div class="tribute-signature">
+                        <div class="signature-line"></div>
+                        <p>With deep sorrow and fond memories,</p>
+                        <p class="signatory">Clement Danso Tandoh</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -3109,6 +3526,8 @@
             // Initialize the gallery
             initGallery();
         });
+
+        
     </script>
 </body>
 </html>
